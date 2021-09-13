@@ -1,0 +1,7 @@
+{
+    "database": {
+        "username": "webstarUser",
+        "password": "bUqyQIdIjSVouydy",
+        "host": "mongo:27017/myFirstDatabase?retryWrites=true&w=majority"
+    }
+}

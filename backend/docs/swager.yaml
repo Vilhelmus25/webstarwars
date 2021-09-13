@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Webstarwars
+  description: An API for Webstarwars
+servers:
+  - url: http://localhost:3000
+paths:
+
+    Error:
+      type: object
+      required:
+        - message
+        - has_error
+      properties:
+        message:
+          type: string
+        has_error:
+          type: boolean

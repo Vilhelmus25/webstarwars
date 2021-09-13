@@ -1,0 +1,11 @@
+{
+    "characters": [
+        {
+            "id": "vader",
+            "name": "Darth Vader",
+            "side": "DARK",
+            "power": "Sötét erő, fénykard",
+            "description": "Lorem ipsum ..."
+        }
+    ]
+}
