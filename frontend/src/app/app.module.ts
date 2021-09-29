@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { JwtInterceptorInterceptor } from './services/jwt-interceptor.interceptor';
+import { CharacterSelectionComponent } from './pages/character-selection/character-selection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    CharacterSelectionComponent,
   ],
   imports: [
     BrowserModule,

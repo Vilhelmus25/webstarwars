@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "../../../styles/_colors" as colors;
+@use "../../../styles/_fonts" as fonts;
+
+.loginBackground{
+    background-image: url("/assets/bg_1.jpg");
+    position: fixed;
+    top:0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Fonts---------------------------------------------------------------
+
+.webstarText{
+    font-family: 'Starjedi';
+    font-size: 30px;
+    color: map.get(colors.$colors, "white");
+    
+}
+
+.frontendText{
+    font-family: 'DistantGalaxy'; 
+    font-size: 70px;
+    color: map.get(colors.$colors, "white");
+}
+
+.userWordText{
+    font-family: 'PoppinsBold';
+    font-size: 14px;
+    color: map.get(colors.$colors, "white");
+}
+.userWordInputText{
+    font-family: 'PoppinsRegular';
+    font-size: 16px;
+    color: map.get(colors.$colors, "black");
+    text-align: center;
+}
+
+.submitButtonText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "black");
+}
+
+//------------------------------------------------------------------
+
+.submitButtonText{
+    background-color: map.get(colors.$colors, "yellow");
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+.frontendText{
+    margin-bottom: 5rem;
+}
+

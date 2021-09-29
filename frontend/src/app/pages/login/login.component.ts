@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
+import { ConfigService } from 'src/app/services/config.service';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   user: User = new User();
 
   constructor(
+    private config: ConfigService,
     private auth: AuthService,
     private router: Router,
   ) { }
@@ -23,10 +25,8 @@ export class LoginComponent implements OnInit {
     this.auth.login(this.user).subscribe(
       user => {
         if (user) {
-          this.router.navigate(['/']);        // a főoldalra navigál, ha van user
+          this.router.navigate(['/characterSelection']);
         }
-        // error handling here:
-
       }
     )
   }

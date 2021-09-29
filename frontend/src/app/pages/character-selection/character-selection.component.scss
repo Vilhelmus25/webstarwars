@@ -1,0 +1,36 @@
+@use "sass:map";
+@use "../../../styles/_colors" as colors;
+@use "../../../styles/_fonts" as fonts;
+
+.characterSelectionBackground{
+    background-image: url("/assets/bg_2.jpg");
+    position: fixed;
+    top:0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logoutIcon{
+    background: url("/assets/logout.svg") no-repeat;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+}
+
+.headerLeft{
+    display: relative;
+}
+
+// Fonts -----------------------------------------------------------
+
+.headerText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}

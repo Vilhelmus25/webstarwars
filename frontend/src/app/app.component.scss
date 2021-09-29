@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "../styles/_colors" as colors;
+@use "../styles/_fonts" as fonts;
+
+.footerText{
+    font-family: 'PoppinsRegular';
+    font-size: 12px;
+    color: map.get(colors.$colors, "gray");
+    text-align: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
