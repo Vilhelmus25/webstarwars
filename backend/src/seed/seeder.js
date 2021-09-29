@@ -27,6 +27,6 @@ const seedCollection = async (model, fileName) => {
         console.log('CHARACTERS NOT FOUND');
     }
 
-    //seedCollection(Subscriber, 'subscriber');
+    seedCollection(Characters, 'characters');
 
 })();

@@ -43,7 +43,7 @@ app.post('/login', authHandler.login);
 app.post('/refresh', authHandler.refresh);
 app.post('/logout', authHandler.logout);
 
-//app.use('/post', authenticateJwt, adminOnly, require('./controllers/post/post.routes'));
+app.use('/characters', authenticateJwt, require('./controllers/characters/characters.routes'));
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((err, req, res, next) => {

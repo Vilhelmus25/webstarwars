@@ -10,7 +10,7 @@ const CharactersSchema = mongoose.Schema({
         required: true
     },
     power: {
-        type: Number,
+        type: String,
         required: true
     },
     description: {

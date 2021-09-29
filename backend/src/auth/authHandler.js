@@ -3,10 +3,10 @@ const UserModel = require('../models/user.model');
 
 (async () => {
     const users = UserModel.find();
-    if (!users || users.length < 1) {
-        const user = new UserModel({ email: 'frontend@webstar.hu', firstName: 'Pilóta', lastName: 'Felvételiző', password: 's9@:8BpuC]*Q,e,A' });
-        await user.save();
-    }
+    // if (!users || users.length < 1) {
+    const user = new UserModel({ email: 'frontend@webstar.hu', firstName: 'Pilóta', lastName: 'Felvételiző', password: 's9@:8BpuC]*Q,e,A' });
+    await user.save();
+    // }
 })();
 
 const refreshTokens = [];
