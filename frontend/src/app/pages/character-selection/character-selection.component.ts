@@ -1,33 +1,45 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Characters } from 'src/app/models/characters';
 import { User } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
 import { CharactersService } from 'src/app/services/characters.service';
+import { ConfigService } from 'src/app/services/config.service';
 import { UserService } from 'src/app/services/user.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-character-selection',
   templateUrl: './character-selection.component.html',
   styleUrls: ['./character-selection.component.scss']
 })
-export class CharacterSelectionComponent implements OnInit {
+export class CharacterSelectionComponent extends LoginComponent implements OnInit {
 
-  user: User = new User();
+  currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
-  currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
+  // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
 
   constructor(
-    private userService: UserService,
-    private characterService: CharactersService,
-    private auth: AuthService,
-  ) { }
+    public userService: UserService,
+    public config: ConfigService,
+    public characterService: CharactersService,
+    public router: Router,
+    public auth: AuthService,
+  ) {
+    super(config, auth, router);
+
+  }
 
   ngOnInit(): void {
   }
 
   onLogout(): void {
     this.auth.logout();
+  }
+
+  onSimulate(): void {
+    this.router.navigate(['/duel']);
   }
 
 }

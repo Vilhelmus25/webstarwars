@@ -1,18 +1,14 @@
 <div class="characterSelectionBackground w-100 h-100 d-flex align-items-center">
-    <div class="col-12 my-auto mx-auto ">
-        <div class="headerText">
-            <div class="headerLeft">
-                <label class="userIcon"> Yoyo {{user.lastName}}</label>
+    <div class="col-10 my-auto mx-auto h-100 py-3">
+        <div class="headerMain col-12 d-flex justify-content-between">
+            <div class="headerLeft d-flex flex-row px-1">
+                <a class="userIcon px-2"></a>
+                <label class="userNameText">{{currentUser$.lastName}} {{currentUser$.firstName}}</label>
             </div>
-            <div class="headerRight">
-                <a href="" click="onLogout()" class="logoutIcon"></a>
-                <label for="">Űrhajó elhagyás</label>
+            <div class="headerRight d-flex flex-row px-1">
+                <label class="logoutText px-2" for="">Űrhajó elhagyás</label>
+                <a class="logoutIcon" href="" click="onLogout()"></a>
             </div>
         </div>
-        <!-- <div class="col-12">
-            <p>List of characters:</p>
-            <p *ngFor="let character of characterList$ | async"> {{ character.name }}</p>
-        </div> -->
-
     </div>
 </div>

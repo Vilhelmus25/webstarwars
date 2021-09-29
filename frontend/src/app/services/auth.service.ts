@@ -56,4 +56,10 @@ export class AuthService {
     localStorage.removeItem('currentUser');
     this.router.navigate(['/', 'login']);             // visszairányít a login oldalra
   }
+
+  getUser(): User | any {
+    if (localStorage.currentUser) {
+      return JSON.parse(localStorage.currentUser);
+    }
+  }
 }

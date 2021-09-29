@@ -11,17 +11,18 @@ import { ConfigService } from 'src/app/services/config.service';
 })
 export class LoginComponent implements OnInit {
 
-  user: User = new User();
+  public user: User = new User();
 
   constructor(
-    private config: ConfigService,
-    private auth: AuthService,
-    private router: Router,
+    public config: ConfigService,
+    public auth: AuthService,
+    public router: Router,
   ) { }
 
   ngOnInit(): void {
   }
   onLogin(): void {
+    // this.user = new User();
     this.auth.login(this.user).subscribe(
       user => {
         if (user) {

@@ -21,9 +21,30 @@
     width: 1.5rem;
     display: flex;
 }
+.userIcon{
+    background: url("/assets/user.svg") no-repeat;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    display: flex;
+}
 
+.headerMain{
+    min-height: 100%;
+}
 .headerLeft{
-    display: relative;
+
+}
+.headerRight{
+
+}
+
+.userNameText{
+
+}
+
+.logoutIcon{
+
 }
 
 // Fonts -----------------------------------------------------------
