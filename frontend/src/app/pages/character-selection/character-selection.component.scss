@@ -30,7 +30,7 @@
 }
 
 .headerMain{
-    min-height: 100%;
+    position: relative;
 }
 .headerLeft{
 
@@ -39,19 +39,42 @@
 
 }
 
-.userNameText{
-
-}
 
 .logoutIcon{
 
+}
+.solid{
+    border-top: 3px solid;
+    border-color: map.get(colors.$colors, "white");
+    margin-top: 2rem;
+    position: absolute;
 }
 
 // Fonts -----------------------------------------------------------
 
 .headerText{
+    margin-top:auto;
     font-family: 'PoppinsBold';
     font-size: 16px;
     color: map.get(colors.$colors, "white");
     
 }
+.userNameText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}
+.logoutText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}
+.selectTwoSoldierText{
+    font-family: 'PoppinsBlack';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+
+//------------------------------------------------------------------
