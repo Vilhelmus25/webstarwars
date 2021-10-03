@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Characters } from 'src/app/models/characters';
@@ -8,6 +8,9 @@ import { CharactersService } from 'src/app/services/characters.service';
 import { ConfigService } from 'src/app/services/config.service';
 import { UserService } from 'src/app/services/user.service';
 import { LoginComponent } from '../login/login.component';
+import SwiperCore, { SwiperOptions } from 'swiper';
+
+SwiperCore.use([]);
 
 @Component({
   selector: 'app-character-selection',
@@ -20,6 +23,14 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
 
+  swiperConfig: SwiperOptions = {
+    slidesPerView: 3,
+    spaceBetween: 50,
+    navigation: true,
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
+  };
+
   constructor(
     public userService: UserService,
     public config: ConfigService,
@@ -29,6 +40,14 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   ) {
     super(config, auth, router);
 
+  }
+
+  @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
+  slideNext() {
+    this.swiper.swiperRef.slideNext(100);
+  }
+  slidePrev() {
+    this.swiper.swiperRef.slidePrev(100);
   }
 
   ngOnInit(): void {

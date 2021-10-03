@@ -2,6 +2,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,6 +24,7 @@ import { CharacterSelectionComponent } from './pages/character-selection/charact
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    SwiperModule,
   ],
   providers: [
     {
