@@ -8,9 +8,8 @@ import { CharactersService } from 'src/app/services/characters.service';
 import { ConfigService } from 'src/app/services/config.service';
 import { UserService } from 'src/app/services/user.service';
 import { LoginComponent } from '../login/login.component';
-import SwiperCore, { Swiper } from 'swiper';
+import { Swiper, SwiperOptions, Navigation, Pagination } from 'swiper';
 
-SwiperCore.use([]);
 
 @Component({
   selector: 'app-character-selection',
@@ -29,20 +28,12 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     public characterService: CharactersService,
     public router: Router,
     public auth: AuthService,
+
   ) {
     super(config, auth, router);
-
   }
-
-  swiper: Swiper = new Swiper('.swiper', {
-    speed: 400,
-    spaceBetween: 100,
-  });
 
   ngOnInit(): void {
-  }
-
-  selectClass(): void {
   }
 
   onLogout(): void {
@@ -54,10 +45,41 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   }
 
   onSwipeNext() {
-    this.swiper.slideNext(100);
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination],
+      speed: 400,
+      slidesPerView: 1,
+      centeredSlides: true,
+      centerInsufficientSlides: true,
+
+      pagination: {
+        clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    swiper.slideNext();
   }
   onSwipePrev() {
-    this.swiper.slidePrev(100);
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination],
+      speed: 400,
+      slidesPerView: 1,
+      pagination: {
+        clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+    swiper.slidePrev();
   }
 
 }
