@@ -42,14 +42,25 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div> -->
-                <swiper [swiperConfig]="swiperConfig" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
-                    <ng-template swiperSlide>Slide 1</ng-template>
-                    <ng-template swiperSlide>Slide 2</ng-template>
-                    <ng-template swiperSlide>Slide 3</ng-template>
-                    <ng-template swiperSlide>Slide 4</ng-template>
-                    <ng-template swiperSlide>Slide 5</ng-template>
-                    <ng-template swiperSlide>Slide 6</ng-template>
-                </swiper>
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
             </div>
         </div>
     </div>
