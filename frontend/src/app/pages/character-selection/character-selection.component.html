@@ -45,9 +45,14 @@
                 <div class="swiper">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
+                        <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
                         <!-- Slides -->
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">
+                            <img class="d-block w-100" src="../../../assets/anakin.png" alt="First slide">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="d-block w-100" src="../../../assets/vader.png" alt="First slide">
+                        </div>
                         <div class="swiper-slide">Slide 3</div>
                         ...
                     </div>
@@ -55,11 +60,11 @@
                     <div class="swiper-pagination"></div>
 
                     <!-- If we need navigation buttons -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev" onClick="onSwipePrev()"></div>
+                    <div class="swiper-button-next" onClick="onSwipeNext()"></div>
 
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
+                    <!-- If we need scrollbar
+                    <div class="swiper-scrollbar"></div> -->
                 </div>
             </div>
         </div>

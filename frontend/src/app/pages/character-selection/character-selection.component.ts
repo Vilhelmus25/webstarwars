@@ -42,6 +42,9 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   ngOnInit(): void {
   }
 
+  selectClass(): void {
+  }
+
   onLogout(): void {
     this.auth.logout();
   }
