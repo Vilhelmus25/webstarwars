@@ -34,23 +34,10 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   }
 
   ngOnInit(): void {
-  }
-
-  onLogout(): void {
-    this.auth.logout();
-  }
-
-  onSimulate(): void {
-    this.router.navigate(['/duel']);
-  }
-
-  onSwipeNext() {
     const swiper = new Swiper('.swiper', {
       modules: [Navigation, Pagination],
       speed: 400,
-      slidesPerView: 1,
-      centeredSlides: true,
-      centerInsufficientSlides: true,
+
 
       pagination: {
         clickable: true,
@@ -63,23 +50,51 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
       },
     });
     swiper.slideNext();
+    swiper.slidePrev();
+  }
+
+  onLogout(): void {
+    this.auth.logout();
+  }
+
+  onSimulate(): void {
+    this.router.navigate(['/duel']);
+  }
+
+  onSwipeNext() {
+    // const swiper = new Swiper('.swiper', {
+    //   modules: [Navigation, Pagination],
+    //   speed: 400,
+
+
+    //   pagination: {
+    //     clickable: true,
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //   },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    // });
+    // swiper.slideNext();
   }
   onSwipePrev() {
-    const swiper = new Swiper('.swiper', {
-      modules: [Navigation, Pagination],
-      speed: 400,
-      slidesPerView: 1,
-      pagination: {
-        clickable: true,
-        el: '.swiper-pagination',
-        type: 'bullets',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-    swiper.slidePrev();
+    // const swiper = new Swiper('.swiper', {
+    //   modules: [Navigation, Pagination],
+    //   speed: 400,
+
+    //   pagination: {
+    //     clickable: true,
+    //     el: '.swiper-pagination',
+    //     type: 'bullets',
+    //   },
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    // });
+    // swiper.slidePrev();
   }
 
 }

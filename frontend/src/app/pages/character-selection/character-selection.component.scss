@@ -50,6 +50,15 @@
     position: absolute;
 }
 
+.circle {
+    height: 50%;
+    width: 25%;
+    background-color: map.get(colors.$colors, "yellow");
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+  }
+
 // Swiper ----------------------------------------------------------
 
 .swiper-pagination{
