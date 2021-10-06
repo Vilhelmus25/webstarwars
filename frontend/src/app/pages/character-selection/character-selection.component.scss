@@ -51,18 +51,34 @@
 }
 
 .circle {
-    height: 50%;
-    width: 25%;
+    height: 30vw;
+    width: 30vw;
     background-color: map.get(colors.$colors, "yellow");
     border-radius: 50%;
-    display: inline-block;
+    top: 35%;
     position: absolute;
   }
 
 // Swiper ----------------------------------------------------------
 
+.swiper{
+
+}
+.characterImage{
+    position: static;
+    width: 50vw;
+    height: 50vw;
+    left: 10%;
+}
+
+.swiper-button-next{
+    color: map.get(colors.$colors, "white");
+}
+.swiper-button-prev{
+    color: map.get(colors.$colors, "white");
+}
 .swiper-pagination{
-    //background-color: map.get(colors.$colors, "white");
+    color: map.get(colors.$colors, "white");
 }
 
 // -----------------------------------------------------------------

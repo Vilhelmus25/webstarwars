@@ -1,7 +1,6 @@
 export class Characters {
     _id: string = "";
-    short: string = "";
-    name: string = "";
+    name_id: string = "";
     side: string = "";
     power: string = "";
     description: string = "";

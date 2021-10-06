@@ -21,6 +21,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
+  sideIsLight: boolean = true;
 
   constructor(
     public userService: UserService,
@@ -37,8 +38,6 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     const swiper = new Swiper('.swiper', {
       modules: [Navigation, Pagination],
       speed: 400,
-
-
       pagination: {
         clickable: true,
         el: '.swiper-pagination',
@@ -62,6 +61,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   }
 
   onSwipeNext() {
+
     // const swiper = new Swiper('.swiper', {
     //   modules: [Navigation, Pagination],
     //   speed: 400,
