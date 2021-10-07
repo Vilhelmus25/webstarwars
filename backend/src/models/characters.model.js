@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const CharactersSchema = mongoose.Schema({
-    name: {
+    name_id: {
         type: String,
         required: true
     },
