@@ -61,24 +61,44 @@
 
 // Swiper ----------------------------------------------------------
 
-.swiper{
-
+.swiper-slide{
+    width: 30vw;
+    bottom: 30vw;
 }
 .characterImage{
-    position: static;
-    width: 50vw;
-    height: 50vw;
-    left: 10%;
+    position: relative;
+    top: 30vw;
+    // height: 30vw;
+    // width: 30vh;
+    
 }
-
-.swiper-button-next{
+.swiper-controllers{
+    position: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    // width: 10vw;
+}
+.swiper-buttons{
+    // position: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // justify-content: center;
+}
+.swiper-pagination:active{
     color: map.get(colors.$colors, "white");
+    position: relative;
 }
 .swiper-button-prev{
     color: map.get(colors.$colors, "white");
+    position: relative;
+    margin: 0;
 }
-.swiper-pagination{
+.swiper-button-next{
     color: map.get(colors.$colors, "white");
+    position: relative;
+    margin: 0;
+
 }
 
 // -----------------------------------------------------------------

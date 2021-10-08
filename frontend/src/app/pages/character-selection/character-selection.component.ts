@@ -38,6 +38,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     const swiper = new Swiper('.swiper', {
       modules: [Navigation, Pagination],
       speed: 400,
+      spaceBetween: 100,
       pagination: {
         clickable: true,
         el: '.swiper-pagination',
