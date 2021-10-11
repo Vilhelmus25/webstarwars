@@ -43,6 +43,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
         clickable: true,
         el: '.swiper-pagination',
         type: 'bullets',
+        bulletActiveClass: '.swiper-pagination-bullet-active',
       },
       navigation: {
         nextEl: '.swiper-button-next',

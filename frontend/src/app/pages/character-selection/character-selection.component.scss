@@ -85,8 +85,10 @@
     // flex-wrap: nowrap;
     // justify-content: center;
 }
-.swiper-pagination:active{
-    color: map.get(colors.$colors, "white");
+.swiper-pagination{
+    .swiper-pagination-bullet-active {
+         color: map.get(colors.$colors, "white");
+    }
     position: relative;
 }
 .swiper-button-prev{
