@@ -73,24 +73,20 @@
     
 }
 .swiper-controllers{
-    position: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
     // width: 10vw;
 }
 .swiper-buttons{
-    // position: flex;
-    // flex-direction: row;
-    // flex-wrap: nowrap;
-    // justify-content: center;
+    display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
 }
 .swiper-pagination{
     .swiper-pagination-bullet-active {
-         color: map.get(colors.$colors, "white");
+        color: map.get(colors.$colors, "white");
     }
     position: relative;
 }
+
 .swiper-button-prev{
     color: map.get(colors.$colors, "white");
     position: relative;
