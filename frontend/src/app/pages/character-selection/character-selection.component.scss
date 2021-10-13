@@ -50,33 +50,46 @@
     position: absolute;
 }
 
+.rightSide{
+    position: relative;
+}
+
 .circle {
-    height: 30vw;
-    width: 30vw;
+    height: 25vw;
+    width: 25vw;
     background-color: map.get(colors.$colors, "yellow");
     border-radius: 50%;
-    top: 35%;
+    top: 10rem;
     position: absolute;
+    left: 10vh;
   }
 
 // Swiper ----------------------------------------------------------
 
+.swiper{
+    width: 70vh;
+    position: relative;
+}
+
 .swiper-slide{
+    bottom: 25vw;
+    
+}
+
+.swiper-wrapper{
     width: 30vh;
-    bottom: 30vw;
-    right: 10vh;
+    top: 25vw;
 }
 .characterImage{
-    position: relative;
-    top: 30vw;
-    // height: 30vw;
-    // width: 30vh;
+    // position: relative;
+    // top: 30vw;
+    // // height: 30vw;
+    // // width: 30vh;
     
 }
 .swiper-controllers{
     // width: 10vw;
     display: grid;
-    margin-left: auto;
     gap: 1rem;
     grid-auto-flow: column;
 }

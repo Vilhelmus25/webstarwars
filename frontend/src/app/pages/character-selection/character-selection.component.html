@@ -13,25 +13,28 @@
             <hr class="col-12 solid">
         </div>
         <div class="row">
-            <div class="leftSide col-6 d-flex flex-row">
-                <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
-                <div *ngIf="sideIsLight" class="forceSideDark">
-                    <div class="col-6">
-                        <span class="outerSquare">
-                            <span class="innerSquare"></span>
-                        </span>
+            <div class="col-6">
+                <div class="leftSide d-flex justify-content-start flex-row w-100">
+                    <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
+                    <div *ngIf="sideIsLight" class="forceSideDark">
+                        <div class="col-6">
+                            <span class="outerSquare">
+                                <span class="innerSquare"></span>
+                            </span>
+                        </div>
+                        <div class="col-6">
+                            <p></p>
+                            <p></p>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <p></p>
-                        <p></p>
-                    </div>
+
+
                 </div>
-
-
             </div>
-            <div class="rightSide col-6 d-flex justify-content-center flex-row-reverse">
-                <!-- Carousel ----------------------------------------------------------------------------------------- -->
-                <!-- <div id="charactersIndicators" class="carousel slide" data-ride="carousel">
+            <div class="col-6">
+                <div class="rightSide d-flex justify-content-end flex-column w-100">
+                    <!-- Carousel ----------------------------------------------------------------------------------------- -->
+                    <!-- <div id="charactersIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li *ngFor="let characters of characterList$ | async; let indexOfelement=index;"
                             data-target="#charactersIndicators" data-slide-to="0" class="active">
@@ -55,42 +58,43 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div> -->
-                <div class="swiper-controllers">
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-buttons">
-                        <img class="swiper-button-prev mx-5" src='../../../assets/arrow_circle@2x.png'
-                            (click)="onSwipePrev()">
-                        <img class="swiper-button-next mx-5" src='../../../assets/arrow_circle@2x.png'
-                            (click)="onSwipeNext()">
+                    <div class="swiper-controllers">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-buttons">
+                            <img class="swiper-button-prev mr-5" src='../../../assets/arrow_circle@2x.png'
+                                (click)="onSwipePrev()">
+                            <img class="swiper-button-next ml-5" src='../../../assets/arrow_circle@2x.png'
+                                (click)="onSwipeNext()">
+                        </div>
                     </div>
-                </div>
-                <div class="circle">
+                    <div class="circle">
 
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
-                            <!-- Slides -->
-                            <div class="swiper-slide"
-                                *ngFor="let character of characterList$ | async; let indexOfelement=index">
-                                <img class="d-block w-100 characterImage"
-                                    src='../../../assets/{{character.name_id}}.png' alt="First slide">
-                            </div>
-                            <!-- <div class="swiper-slide">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
+                                <!-- Slides -->
+                                <div class="swiper-slide"
+                                    *ngFor="let character of characterList$ | async; let indexOfelement=index">
+                                    <img class="d-block w-100 characterImage"
+                                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                                </div>
+                                <!-- <div class="swiper-slide">
                             <img class="d-block w-100" src="../../../assets/vader.png" alt="Second slide">
                         </div>
                         <div class="swiper-slide">
                             <img class="d-block w-100" src="../../../assets/boba.png" alt="Third slide">
                         </div> -->
-                        </div>
-                        <!-- If we need pagination -->
+                            </div>
+                            <!-- If we need pagination -->
 
 
-                        <!-- If we need navigation buttons -->
+                            <!-- If we need navigation buttons -->
 
 
-                        <!-- If we need scrollbar
+                            <!-- If we need scrollbar
                         <div class="swiper-scrollbar"></div> -->
+                        </div>
                     </div>
                 </div>
             </div>
