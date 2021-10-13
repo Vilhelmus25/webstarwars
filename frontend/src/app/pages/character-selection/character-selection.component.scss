@@ -62,8 +62,9 @@
 // Swiper ----------------------------------------------------------
 
 .swiper-slide{
-    width: 30vw;
+    width: 30vh;
     bottom: 30vw;
+    right: 10vh;
 }
 .characterImage{
     position: relative;
@@ -74,28 +75,39 @@
 }
 .swiper-controllers{
     // width: 10vw;
+    display: grid;
+    margin-left: auto;
+    gap: 1rem;
+    grid-auto-flow: column;
 }
 .swiper-buttons{
-    display: grid;
-  gap: 1rem;
-  grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .swiper-pagination{
     .swiper-pagination-bullet-active {
         color: map.get(colors.$colors, "white");
     }
     position: relative;
+    top: 1vw;
+    margin:1vw;
 }
 
 .swiper-button-prev{
     color: map.get(colors.$colors, "white");
+    height: 2.5vw;
+    margin: 0px;
     position: relative;
-    margin: 0;
+    width: 2.5vw;
 }
 .swiper-button-next{
     color: map.get(colors.$colors, "white");
+    height: 2.5vw;
+    margin: 0px;
     position: relative;
-    margin: 0;
+    transform: rotate(180deg);
+    width: 2.5vw;
 
 }
 
