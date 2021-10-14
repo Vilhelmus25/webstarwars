@@ -55,69 +55,75 @@
 }
 
 .circle {
-    height: 25vw;
-    width: 25vw;
+    height: 28vw;
+    width: 28vw;
     background-color: map.get(colors.$colors, "yellow");
     border-radius: 50%;
-    top: 10rem;
-    position: absolute;
-    left: 10vh;
+    position: relative;
+    margin-top: 25%;
+    margin-left: auto;
+    bottom:5vh;
   }
 
 // Swiper ----------------------------------------------------------
 
 .swiper{
-    width: 70vh;
-    position: relative;
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .swiper-slide{
-    bottom: 25vw;
-    
+ 
 }
 
 .swiper-wrapper{
-    width: 30vh;
-    top: 25vw;
+
 }
 .characterImage{
-    // position: relative;
-    // top: 30vw;
-    // // height: 30vw;
-    // // width: 30vh;
-    
+
 }
 .swiper-controllers{
-    // width: 10vw;
-    display: grid;
-    gap: 1rem;
-    grid-auto-flow: column;
+    
+    // display: grid;
+    // gap: 1rem;
+    // grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
 }
 .swiper-buttons{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    position: relative;
 }
 .swiper-pagination{
     .swiper-pagination-bullet-active {
         color: map.get(colors.$colors, "white");
     }
-    position: relative;
     top: 1vw;
-    margin:1vw;
+    margin: 1vw;
+    margin-left: 15%;
+    // width: 1vw;
+    
 }
 
 .swiper-button-prev{
     color: map.get(colors.$colors, "white");
     height: 2.5vw;
-    margin: 0px;
+    margin-right: 1vh;
     position: relative;
     width: 2.5vw;
 }
 .swiper-button-next{
     color: map.get(colors.$colors, "white");
     height: 2.5vw;
-    margin: 0px;
+    margin-left: 1vh;
     position: relative;
     transform: rotate(180deg);
     width: 2.5vw;

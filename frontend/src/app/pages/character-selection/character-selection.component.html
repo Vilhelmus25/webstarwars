@@ -61,41 +61,41 @@
                     <div class="swiper-controllers">
                         <div class="swiper-pagination"></div>
                         <div class="swiper-buttons">
-                            <img class="swiper-button-prev mr-5" src='../../../assets/arrow_circle@2x.png'
+                            <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'
                                 (click)="onSwipePrev()">
-                            <img class="swiper-button-next ml-5" src='../../../assets/arrow_circle@2x.png'
+                            <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'
                                 (click)="onSwipeNext()">
                         </div>
                     </div>
                     <div class="circle">
-
-                        <div class="swiper">
-                            <!-- Additional required wrapper -->
-                            <div class="swiper-wrapper">
-                                <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
-                                <!-- Slides -->
-                                <div class="swiper-slide"
-                                    *ngFor="let character of characterList$ | async; let indexOfelement=index">
-                                    <img class="d-block w-100 characterImage"
-                                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
-                                </div>
-                                <!-- <div class="swiper-slide">
+                    </div>
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
+                            <!-- Slides -->
+                            <div class="swiper-slide"
+                                *ngFor="let character of characterList$ | async; let indexOfelement=index">
+                                <img class="d-block w-100 characterImage"
+                                    src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                            </div>
+                            <!-- <div class="swiper-slide">
                             <img class="d-block w-100" src="../../../assets/vader.png" alt="Second slide">
                         </div>
                         <div class="swiper-slide">
                             <img class="d-block w-100" src="../../../assets/boba.png" alt="Third slide">
                         </div> -->
-                            </div>
-                            <!-- If we need pagination -->
-
-
-                            <!-- If we need navigation buttons -->
-
-
-                            <!-- If we need scrollbar
-                        <div class="swiper-scrollbar"></div> -->
                         </div>
+                        <!-- If we need pagination -->
+
+
+                        <!-- If we need navigation buttons -->
+
+
+                        <!-- If we need scrollbar
+                        <div class="swiper-scrollbar"></div> -->
                     </div>
+
                 </div>
             </div>
         </div>
