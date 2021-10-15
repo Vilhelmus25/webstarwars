@@ -21,7 +21,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
-  sideIsLight: boolean = true;
+  isSideLight: String = "light";
 
   constructor(
     public userService: UserService,
@@ -98,6 +98,10 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     //   },
     // });
     // swiper.slidePrev();
+  }
+
+  setSide(getSide: String): void {
+    this.isSideLight = getSide;
   }
 
 }

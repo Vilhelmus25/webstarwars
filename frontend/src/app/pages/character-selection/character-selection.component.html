@@ -16,14 +16,16 @@
             <div class="col-6">
                 <div class="leftSide d-flex justify-content-start flex-row w-100">
                     <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
-                    <div *ngIf="sideIsLight" class="forceSideDark">
+                    <div *ngIf="isSideLight" class="forceSideDark">
                         <div class="col-6">
                             <span class="outerSquare">
-                                <span class="innerSquare"></span>
+                                <span class="innerSquare">
+
+                                </span>
                             </span>
                         </div>
                         <div class="col-6">
-                            <p></p>
+                            <p>{{isSideLight}}</p>
                             <p></p>
                         </div>
                     </div>
@@ -75,7 +77,9 @@
                             <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
                             <!-- Slides -->
                             <div class="swiper-slide"
-                                *ngFor="let character of characterList$ | async; let indexOfelement=index">
+                                *ngFor="let character of characterList$ | async; let indexOfelement=index"
+                                (click)="setSide(character.side)">
+                                <!-- json.{{character.side}} -->
                                 <img class="d-block w-100 characterImage"
                                     src='../../../assets/{{character.name_id}}.png' alt="First slide">
                             </div>

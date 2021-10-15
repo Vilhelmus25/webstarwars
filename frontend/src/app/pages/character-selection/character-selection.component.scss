@@ -50,6 +50,18 @@
     position: absolute;
 }
 
+.leftSide{
+position: relative;
+}
+
+.outerSquare{
+    position: absolute;
+    background-color: map.get(colors.$colors, "yellow");
+}
+.innerSquare{
+    position: relative;
+}
+
 .rightSide{
     position: relative;
 }
@@ -89,9 +101,6 @@
 }
 .swiper-controllers{
     
-    // display: grid;
-    // gap: 1rem;
-    // grid-auto-flow: column;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -109,8 +118,6 @@
     top: 1vw;
     margin: 1vw;
     margin-left: 15%;
-    // width: 1vw;
-    
 }
 
 .swiper-button-prev{
