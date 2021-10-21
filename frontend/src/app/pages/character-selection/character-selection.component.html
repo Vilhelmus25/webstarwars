@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-6">
                             <p>{{isSideLight}}</p>
-                            <p></p>
+                            <!-- <p>{{characterList$.side}}</p> -->
                         </div>
                     </div>
 
@@ -63,10 +63,8 @@
                     <div class="swiper-controllers">
                         <div class="swiper-pagination"></div>
                         <div class="swiper-buttons">
-                            <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'
-                                (click)="onSwipePrev()">
-                            <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'
-                                (click)="onSwipeNext()">
+                            <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'>
+                            <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'>
                         </div>
                     </div>
                     <div class="circle">
@@ -77,8 +75,7 @@
                             <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
                             <!-- Slides -->
                             <div class="swiper-slide"
-                                *ngFor="let character of characterList$ | async; let indexOfelement=index"
-                                (click)="setSide(character.side)">
+                                *ngFor="let character of characterList$ | async; let indexOfelement=index">
                                 <!-- json.{{character.side}} -->
                                 <img class="d-block w-100 characterImage"
                                     src='../../../assets/{{character.name_id}}.png' alt="First slide">

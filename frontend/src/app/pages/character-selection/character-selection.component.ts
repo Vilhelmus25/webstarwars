@@ -102,6 +102,8 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
 
   setSide(getSide: String): void {
     this.isSideLight = getSide;
+    console.log(getSide);
+    console.log(this.isSideLight);
   }
 
 }
