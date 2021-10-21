@@ -20,6 +20,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
 
   currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
+  characterList: Characters[] = [];
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
   isSideLight: String = "light";
 
@@ -32,6 +33,10 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
 
   ) {
     super(config, auth, router);
+    this.characterList$.subscribe(itemList => {
+      this.characterList = itemList;
+      console.log(this.characterList);
+    });
   }
 
   ngOnInit(): void {

@@ -12,54 +12,10 @@
             </div>
             <hr class="col-12 solid">
         </div>
-        <div class="row">
-            <div class="col-6">
-                <div class="leftSide d-flex justify-content-start flex-row w-100">
-                    <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
-                    <div *ngIf="isSideLight" class="forceSideDark">
-                        <div class="col-6">
-                            <span class="outerSquare">
-                                <span class="innerSquare">
-
-                                </span>
-                            </span>
-                        </div>
-                        <div class="col-6">
-                            <p>{{isSideLight}}</p>
-                            <!-- <p>{{characterList$.side}}</p> -->
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
+        <div class="row flex-row-reverse">
             <div class="col-6">
                 <div class="rightSide d-flex justify-content-end flex-column w-100">
-                    <!-- Carousel ----------------------------------------------------------------------------------------- -->
-                    <!-- <div id="charactersIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li *ngFor="let characters of characterList$ | async; let indexOfelement=index;"
-                            data-target="#charactersIndicators" data-slide-to="0" class="active">
-                        </li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../../../assets/anakin.png" alt="First slide">
-                        </div>
-                        <div class="carousel-item"
-                            *ngFor="let characters of characterList$ | async; let indexOfelement=index;">
-                            <img class="d-block w-100" src="../../../assets/{{characters.short}}.png" alt="First slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div> -->
+
                     <div class="swiper-controllers">
                         <div class="swiper-pagination"></div>
                         <div class="swiper-buttons">
@@ -79,13 +35,8 @@
                                 <!-- json.{{character.side}} -->
                                 <img class="d-block w-100 characterImage"
                                     src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                                <p>{{characterList[indexOfelement].side}}</p>
                             </div>
-                            <!-- <div class="swiper-slide">
-                            <img class="d-block w-100" src="../../../assets/vader.png" alt="Second slide">
-                        </div>
-                        <div class="swiper-slide">
-                            <img class="d-block w-100" src="../../../assets/boba.png" alt="Third slide">
-                        </div> -->
                         </div>
                         <!-- If we need pagination -->
 
@@ -96,6 +47,26 @@
                         <!-- If we need scrollbar
                         <div class="swiper-scrollbar"></div> -->
                     </div>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="leftSide d-flex justify-content-start flex-row w-100">
+                    <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
+                    <div *ngIf="isSideLight" class="forceSideDark">
+                        <div class="col-6">
+                            <span class="outerSquare">
+                                <span class="innerSquare">
+
+                                </span>
+                            </span>
+                        </div>
+                        <div class="col-6">
+
+                            <!-- <p>{{characterList$.side}}</p> -->
+                        </div>
+                    </div>
+
 
                 </div>
             </div>
