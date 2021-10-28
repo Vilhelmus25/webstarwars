@@ -22,7 +22,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
-  isSideLight: String = "light";
+  indexCharacter: number = 0;
 
   constructor(
     public userService: UserService,
@@ -105,10 +105,13 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     // swiper.slidePrev();
   }
 
-  setSide(getSide: String): void {
-    this.isSideLight = getSide;
-    console.log(getSide);
-    console.log(this.isSideLight);
+  swipeCharacter(direction: String): void {
+    if (direction === "right") {
+      this.indexCharacter = this.indexCharacter + 1;
+    }
+    else {
+      this.indexCharacter = this.indexCharacter - 1;
+    }
   }
 
 }

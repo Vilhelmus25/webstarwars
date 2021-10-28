@@ -19,8 +19,10 @@
                     <div class="swiper-controllers">
                         <div class="swiper-pagination"></div>
                         <div class="swiper-buttons">
-                            <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'>
-                            <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'>
+                            <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'
+                                (click)="swipeCharacter(right)">
+                            <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'
+                                (click)="swipeCharacter(left)">
                         </div>
                     </div>
                     <div class="circle">
@@ -31,21 +33,13 @@
                             <!-- *ngFor="let character of characterList$ | async; let indexOfelement=index" -->
                             <!-- Slides -->
                             <div class="swiper-slide"
-                                *ngFor="let character of characterList$ | async; let indexOfelement=index">
+                                *ngFor="let character of characterList$ | async; let indexOfElement=index">
                                 <!-- json.{{character.side}} -->
                                 <img class="d-block w-100 characterImage"
                                     src='../../../assets/{{character.name_id}}.png' alt="First slide">
-                                <p>{{characterList[indexOfelement].side}}</p>
+                                <p>{{characterList[indexOfElement].side}}</p>
                             </div>
                         </div>
-                        <!-- If we need pagination -->
-
-
-                        <!-- If we need navigation buttons -->
-
-
-                        <!-- If we need scrollbar
-                        <div class="swiper-scrollbar"></div> -->
                     </div>
 
                 </div>
@@ -53,11 +47,11 @@
             <div class="col-6">
                 <div class="leftSide d-flex justify-content-start flex-row w-100">
                     <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
-                    <div *ngIf="isSideLight" class="forceSideDark">
+                    <div class="forceSideDark">
                         <div class="col-6">
                             <span class="outerSquare">
                                 <span class="innerSquare">
-
+                                    <p>{{characterList[{{indexCharacter}}].side}}</p>
                                 </span>
                             </span>
                         </div>
