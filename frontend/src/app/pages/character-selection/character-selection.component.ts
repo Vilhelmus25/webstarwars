@@ -22,6 +22,9 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
   // currentUser$: Observable<User> = this.userService.get(this.user._id.toString());
+  direction: String = "";
+  left: String = "left";
+  right: String = "right";
   indexCharacter: number = 0;
 
   constructor(
@@ -105,13 +108,9 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     // swiper.slidePrev();
   }
 
-  swipeCharacter(direction: String): void {
-    if (direction === "right") {
-      this.indexCharacter = this.indexCharacter + 1;
-    }
-    else {
-      this.indexCharacter = this.indexCharacter - 1;
-    }
+  swipeCharacterPlus(): void {
+    this.indexCharacter += 1;
+    console.log(this.indexCharacter);
   }
 
 }

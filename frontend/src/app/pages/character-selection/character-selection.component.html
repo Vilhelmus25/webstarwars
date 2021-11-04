@@ -20,9 +20,9 @@
                         <div class="swiper-pagination"></div>
                         <div class="swiper-buttons">
                             <img class="swiper-button-prev mx-4 my-1" src='../../../assets/arrow_circle@2x.png'
-                                (click)="swipeCharacter(right)">
+                                ng-click="swipeCharacterPlus()">
                             <img class="swiper-button-next ml-4 my-1" src='../../../assets/arrow_circle@2x.png'
-                                (click)="swipeCharacter(left)">
+                                ng-click="swipeCharacterMinus()">
                         </div>
                     </div>
                     <div class="circle">
@@ -51,7 +51,7 @@
                         <div class="col-6">
                             <span class="outerSquare">
                                 <span class="innerSquare">
-                                    <p>{{characterList[{{indexCharacter}}].side}}</p>
+                                    <p>{{characterList[indexCharacter].side}}</p>
                                 </span>
                             </span>
                         </div>
