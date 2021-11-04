@@ -110,7 +110,11 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
 
   swipeCharacterPlus(): void {
     this.indexCharacter += 1;
-    console.log(this.indexCharacter);
+    // console.log(this.indexCharacter);
+  }
+  swipeCharacterMinus(): void {
+    this.indexCharacter = this.indexCharacter - 1;
+    // console.log(this.indexCharacter);
   }
 
 }
