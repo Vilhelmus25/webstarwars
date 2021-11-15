@@ -46,18 +46,38 @@
             </div>
             <div class="col-6">
                 <div class="leftSide d-flex justify-content-start flex-row w-100">
-                    <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
                     <div class="forceSideDark">
-                        <div class="col-6">
-                            <span class="outerSquare">
-                                <span class="innerSquare">
-                                    <p>{{characterList[indexCharacter].side}}</p>
+                        <div class="col-12">
+                            <div class="d-block">
+                                <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
+                                <div class="d-flex flex-row col-12"
+                                    *ngIf="getCharacterSide(characterList[indexCharacter].side)=='DARK'">
+                                    <div class="darkSideOuterSquare col-6">
+                                        <div class="lightSideInnerSquare"></div>
+                                    </div>
+                                    <div class="mx-5">
+                                        <p>OLDAL</p>
+                                        <p>{{characterList[indexCharacter].side}}</p>
+                                    </div>
+                                </div>
+                                <div class="my-3" *ngIf="getCharacterSide(characterList[indexCharacter].side)=='DARK'">
+                                    <div class="starOuterSquare">
+                                        <img class="star" src='../../../assets/star.png'>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="" *ngIf="getCharacterSide(characterList[indexCharacter].side)=='LIGHT'">
+                                <span class="outerSquare">
+                                    <span class="innerSquare">
+                                        <p>{{characterList[indexCharacter].side}}</p>
+                                    </span>
                                 </span>
-                            </span>
-                            <p>{{characterList[indexCharacter].power}}</p>
-                            <p>{{characterList[indexCharacter].name_id}}</p>
-                            <button>Kiválasztom</button>
-                            <p>{{characterList[indexCharacter].description}}</p>
+                                </div> -->
+                                <div>{{characterList[indexCharacter].power}}</div>
+                                <div>{{characterList[indexCharacter].name_id}}</div>
+                                <button>Kiválasztom</button>
+                                <div>{{characterList[indexCharacter].description}}</div>
+                            </div>
                         </div>
                         <div class="col-6">
 

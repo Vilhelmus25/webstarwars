@@ -54,12 +54,32 @@
 position: relative;
 }
 
-.outerSquare{
+.darkSideOuterSquare{
     position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: map.get(colors.$colors, "white");
+}
+.lightSideInnerSquare{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: map.get(colors.$colors, "black");
+}
+
+.starOuterSquare{
+    position: absolute;
+    height: 40px;
+    width: 40px;
     background-color: map.get(colors.$colors, "yellow");
 }
-.innerSquare{
+
+.star{
     position: relative;
+    top: 4px;
+    left: 4px;
 }
 
 .rightSide{

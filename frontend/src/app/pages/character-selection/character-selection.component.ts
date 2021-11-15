@@ -116,5 +116,8 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     this.indexCharacter = this.indexCharacter - 1;
     // console.log(this.indexCharacter);
   }
+  getCharacterSide(side: String): String {
+    return side;
+  }
 
 }
