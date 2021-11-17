@@ -68,6 +68,20 @@ position: relative;
     width: 30px;
     background-color: map.get(colors.$colors, "black");
 }
+.lightSideOuterSquare{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: map.get(colors.$colors, "black");
+}
+.darkSideInnerSquare{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    height: 30px;
+    width: 30px;
+    background-color: map.get(colors.$colors, "white");
+}
 
 .starOuterSquare{
     position: absolute;
@@ -75,11 +89,27 @@ position: relative;
     width: 40px;
     background-color: map.get(colors.$colors, "yellow");
 }
+.descriptionSquare{
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: map.get(colors.$colors, "yellow");
+}
 
 .star{
     position: relative;
     top: 4px;
     left: 4px;
+}
+
+.chooseButton{
+    width:30%;
+    border-width: 2px;
+    border-radius:10px;
+    border-color: map.get(colors.$colors, "yellow");
+    background-color:rgba(0,0,0,0);
 }
 
 .rightSide{
@@ -183,6 +213,47 @@ position: relative;
 .selectTwoSoldierText{
     font-family: 'PoppinsBlack';
     font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+
+
+.iconTitle{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "yellow");
+}
+
+.heroName{
+    font-family: 'StarJedi';
+    font-size: 90px;
+    color: map.get(colors.$colors, "white");
+}
+
+.chooseButton{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+}
+.descriptionText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+}
+.descriptionContentText{
+    font-family: 'PoppinsRegular';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+}
+
+.characterSide{
+    font-family: 'PoppinsBlack';
+    font-size: 20px;
+    color: map.get(colors.$colors, "white");
+}
+
+.superPower{
+    font-family: 'PoppinsBlack';
+    font-size: 20px;
     color: map.get(colors.$colors, "white");
 }
 

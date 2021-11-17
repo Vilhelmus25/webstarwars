@@ -49,20 +49,51 @@
                     <div class="forceSideDark">
                         <div class="col-12">
                             <div class="d-block">
-                                <p class="selectTwoSoldierText">Válassz két harcost az ellenkező oldalakból!</p>
-                                <div class="d-flex flex-row col-12"
+                                <p class="selectTwoSoldierText pt-4 my-0">Válassz két harcost az ellenkező oldalakból!
+                                </p>
+                                <div class="d-flex flex-row col-12 align-items-center py-4"
                                     *ngIf="getCharacterSide(characterList[indexCharacter].side)=='DARK'">
                                     <div class="darkSideOuterSquare col-6">
                                         <div class="lightSideInnerSquare"></div>
                                     </div>
-                                    <div class="mx-5">
-                                        <p>OLDAL</p>
-                                        <p>{{characterList[indexCharacter].side}}</p>
+                                    <div class="px-5">
+                                        <span class="px-1 iconTitle">OLDAL</span>
+                                        <br>
+                                        <span class="px-1 characterSide">{{characterList[indexCharacter].side}}</span>
                                     </div>
                                 </div>
-                                <div class="my-3" *ngIf="getCharacterSide(characterList[indexCharacter].side)=='DARK'">
+                                <div class="pb-4 d-flex flex-row col-12 align-items-center"
+                                    *ngIf="getCharacterSide(characterList[indexCharacter].side)=='DARK'">
                                     <div class="starOuterSquare">
                                         <img class="star" src='../../../assets/star.png'>
+                                    </div>
+                                    <div class="px-5">
+                                        <span class="px-1 iconTitle">KÜLÖNLEGES ERŐ</span>
+                                        <br>
+                                        <span class="px-1 superPower">{{characterList[indexCharacter].power}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row col-12 align-items-center py-4"
+                                    *ngIf="getCharacterSide(characterList[indexCharacter].side)=='LIGHT'">
+                                    <div class="lightSideOuterSquare col-6">
+                                        <div class="darkSideInnerSquare"></div>
+                                    </div>
+                                    <div class="px-5">
+                                        <span class="px-1 iconTitle">OLDAL</span>
+                                        <br>
+                                        <span class="px-1 characterSide">{{characterList[indexCharacter].side}}</span>
+                                    </div>
+                                </div>
+                                <div class="pb-4 d-flex flex-row col-12 align-items-center"
+                                    *ngIf="getCharacterSide(characterList[indexCharacter].side)=='LIGHT'">
+                                    <div class="starOuterSquare">
+                                        <img class="star" src='../../../assets/star.png'>
+                                    </div>
+                                    <div class="px-5">
+                                        <span class="px-1 iconTitle">KÜLÖNLEGES ERŐ</span>
+                                        <br>
+                                        <span class="px-1 superPower">{{characterList[indexCharacter].power}}</span>
                                     </div>
                                 </div>
 
@@ -73,10 +104,20 @@
                                     </span>
                                 </span>
                                 </div> -->
-                                <div>{{characterList[indexCharacter].power}}</div>
-                                <div>{{characterList[indexCharacter].name_id}}</div>
-                                <button>Kiválasztom</button>
-                                <div>{{characterList[indexCharacter].description}}</div>
+                                <span class="heroName align-items-center mb-4">{{characterList[indexCharacter].name_id}}
+                                </span>
+
+                                <div class="pt-5">
+                                    <button class="btn btn-info chooseButton">Kiválasztom</button>
+                                </div>
+                                <div class="pt-4">
+                                    <div class="descriptionSquare ">
+                                        <span class="descriptionText mx-4">LEÍRÁS</span>
+                                    </div>
+                                </div>
+                                <br>
+                                <span class="descriptionContentText py-4">{{characterList[indexCharacter].description}}
+                                </span>
                             </div>
                         </div>
                         <div class="col-6">
