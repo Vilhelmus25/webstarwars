@@ -5,6 +5,10 @@ const CharactersSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    name: {
+        type: String,
+        required: true
+    },
     side: {
         type: String,
         required: true

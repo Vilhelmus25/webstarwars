@@ -1,86 +1,86 @@
 [
     {
         "name_id": "vader",
-        "name": "Darth Vader",
-        "side": "DARK",
+        "name": "darth vader",
+        "side": "Sötét",
         "power": "Sötét erő, fénykard",
         "description": "Ő az új sötét nagyúr.Anakin rejtőzik a sok páncél és gép alatt mivel testének a 85% megégett.A 6. részben 'a jedi visszatér' és megöli az Uralkodót amibe belehal."
     },
     {
         "name_id": "luke",
-        "name": "Luke Skywalker",
-        "side": "LIGHT",
+        "name": "luke skywalker",
+        "side": "Fény",
         "power": "Fény erő, fénykard",
-        "description": "Luke Skywalker az isten háta mögötti sivatagos Tatooine bolygó sivár vidékén élő fiatal farmerfiú. A nagybátyja nadvességfarmján végzett unalmas és mindennapos munka közben arról álmodozik, hogy egyszer eljuthat az Akadémiára, ahol űrhajópilóta válhat belőle. A nevelőszülei irént érzett tisztelet eddig nem engedte, hogy útnak induljon. Amikor azonban új droidjában felfedez egy rejtéjes, titkos üzenetet, felkerekedik, hogy felkutassa az üzenet küldőjét. Ezáltal a kalandok új világába cseppen és a viharos események sodrában valóra válthatja nagy állmát. Luke a második fénykardját Ben Kenobi Tatooinei kunyhójában építi meg. Szembesülve apja múltjának titkával, tanítómesterei, Ben Kenobi és Yoda segítségével Luke megtanulja használni az Erőt. Bár az úton sokszor egyedül kell haladnia, Luke célul tűzi ki maga elé, hogy akárcsak apja, ő is Jedi lovag legyen. Visszatérve Dagobah-ra, Yodától megtudja, hogy már majdnem sikerült elérnie nagy célját. Luke élete legnagyobb kihívásával néz szembe, amikor elindul, hogy a Galaxis szabadságáért megküzdjön a Császárral és Darth Vaderrel. Gyermekkorában Luke nem sokat tudott apjáról. Ben Kenobi árulta el neki a titkot, hogy apja valaha Jedi lovag, űrpilóta és kiváló harcos volt, de halálának körülményeit továbbra is homály fedi. Luke csupán akkor tudja meg az igazságot, amikor szembeszáll Darth Vaderrel. Ez a legnagyobb próbatétel, amit az Erő jó oldalára felesküdöttfiúnak ki kell állnia."
+        "description": "Luke Skywalker az isten háta mögötti sivatagos Tatooine bolygó sivár vidékén élő fiatal farmerfiú. A nagybátyja nadvességfarmján végzett unalmas és mindennapos munka közben arról álmodozik, hogy egyszer eljuthat az Akadémiára, ahol űrhajópilóta válhat belőle. A nevelőszülei irént érzett tisztelet eddig nem engedte, hogy útnak induljon. Amikor azonban új droidjában felfedez egy rejtéjes, titkos üzenetet, felkerekedik, hogy felkutassa az üzenet küldőjét. Ezáltal a kalandok új világába cseppen és a viharos események sodrában valóra válthatja nagy állmát."
     },
     {
         "name_id": "anakin",
-        "name": "Anakin Skywalker",
-        "side": "LIGHT",
+        "name": "anakin skywalker",
+        "side": "Fény",
         "power": "Fény erő, fénykard",
-        "description": "Anakin Skywalker a Tatooineon született, és édesanyjához hasonlóan maga is rabszolga volt. Fogantatása körülményeiről kevés anyag áll rendelkezésre; Anakinnek nincs apja, valószínűleg a midikloriánok nemzették. Erre utal vérének igen magas midiklorán szintje is, ami az Erőre igen fogékonnyá tette. Már gyermekkorában szokatlanul ügyes technikus volt és hihetetlen érzékkel rendelkezett a repülés terén. Később ő lett az egyik legügyesebb vadászpilóta.Hatéves korában találkozott a menekülő Amidala hercegnővel és az őt kísérő két Jedi lovaggal, Qui-Gon Jinnel és Obi-Wan Kenobival. Qui-Gon felfigyelt a fiú kivételes képességeire, úgy vélte, ő lehet a kiválasztott, aki a jóslat szerint egyensúlyt teremt majd ez Erőben. Ezért egy fogadás során kiváltotta a rabszolgaságból, ám édesanyját kénytelen volt sorsára hagyni.Qui-Gon Jinn halála után a Jedi Tanács, bár komoly kétségeik voltak, engedélyezte Obi-Wan Kenobinak, hogy Anakint tanítványává fogadja.Későn megkezdett tanulmányainak tulajdonítják, hogy az ifjú komolyabb érzelmekkel rendelkezett, mint amit a Jedik megengedhetnek maguknak. Erős érzelmi szálak kötötték őt hátrahagyott édesanyjához, valamint titkolt szerelem fűzte a nála tizenkét évvel idősebb Amidalához, akit később feleségül vett. Az ő gyermekeik Luke Skywalker és Leia Organa hercegnő.Érzelmei végül Palpatine szenátor oldalára sodorták, elárulta mentorát és elpusztította szerelmét, tevékenyen elősegítve ezzel az addig fennálló Köztársaság bukását és a Birodalom felépítését. Új mesterétől a Darth Vader nevet kapta, s ezzel meghalt az a személy, akit Anakin Skywalker néven ismer a Galaktikus történetírás."
+        "description": "Anakin Skywalker a Tatooineon született, és édesanyjához hasonlóan maga is rabszolga volt. Fogantatása körülményeiről kevés anyag áll rendelkezésre; Anakinnek nincs apja, valószínűleg a midikloriánok nemzették. Erre utal vérének igen magas midiklorán szintje is, ami az Erőre igen fogékonnyá tette. Már gyermekkorában szokatlanul ügyes technikus volt és hihetetlen érzékkel rendelkezett a repülés terén. Később ő lett az egyik legügyesebb vadászpilóta."
     },
     {
         "name_id": "boba",
-        "name": "Boba Fett",
-        "side": "DARK",
-        "power": "Fény erő, fénykard",
+        "name": "boba fett",
+        "side": "Sötét",
+        "power": "Foton fröcskölő, jet-pack, lángszóró ",
         "description": "Bobba Fett 9 éves volt mikor apja Jango Fett meghalt.13 évesen már sorba kapta megbízásait fejvadászként az uralkodótol. Bobba Darth Vader és Jabba kéréseit teljesítette.Han Solo és Lando Karliszian sokszor megalászták itt kezdődött el a Solo elleni hadművelet. Solot végre elkapta és elvitte Jabba palotájába.Asarlakba zúgott bele.Az egész galaxis azt hitte,hogy meghalt de a helhatattlan fejvadász túlélte. Húszév után végre békét kötött Hannal és folytatta tovább a munkáját."
     },
     {
         "name_id": "grievous",
-        "name": "General Grievous",
-        "side": "DARK",
-        "power": "Fény erő, fénykard",
+        "name": "general grievous",
+        "side": "Sötét",
+        "power": "4 fénykard, rotációs karok",
         "description": "Grievous eredeti neve Qymaen jai Sheelal, és a Kalee bolygóról származó kaleesh volt.Az Intergalaktikus Bankár Klán vezetője, San Hill és Dooku gróf bombát helyeztek el Grievous hajóján, a Martyron. Grievous ugyan túlélte a robbanást, de súlyosan megsebesült.Dooku gróf tudta, mire fogja felhasználni. Dooku megölte Syfo-Diaz mestert, lefagyasztotta, s az ő szerveit ültette Grievous-ba, ezáltal egy kiborg szörnyet alkotva. A fénykard-vívás művészetére is megtanította, ezáltal Grievous egy Sith lovag is lett. "
     },
     {
         "name_id": "kenobi",
-        "name": "Obivan Kenobi",
-        "side": "LIGHT",
+        "name": "obivan kenobi",
+        "side": "Fény",
         "power": "Fény erő, fénykard",
         "description": "Obi-Wan Kenobi egy, ha nem a leghíresebb Jedi mester volt, a Köztársaság utolsó éveiben még a Tanácsba is bekerült.Obi-Wan Kenobi fiatalkora nehéz volt, hisz Qui-Gon először nem akarta felfogadni tanítványaként, de miután Kenobi folyamatosan bizonyított, Qui-Gon változtatott döntésén.Obi-Wan már padawanként is erős Jedi volt, Qui-Gon nagyon büszke volt rá, mint ahogy ezt sokszor el is mondta.A Naboon Qui-Gonnal harcoltak Darth Maullal, ám Maul megölte Qui-Gont, de Obi-Wan megbosszúlta mesterét.Halálakor Qui-Gon megkérte Obi-Wan, hogy tanítsa ki Anakint. Obi-Wan betartotta ígéretét, miután a Tanácstól megkapta az engedélyt, így mester lett."
     },
     {
         "name_id": "maul",
-        "name": "Dark Maul",
-        "side": "DARK",
-        "power": "Fény erő, fénykard",
+        "name": "dark maul",
+        "side": "Sötét",
+        "power": "Sötét erő, két oldalú lézerkard",
         "description": "Darth Maul egy zabrak férfi volt, az Ibroniáról származott.Már gyermekkorában elszakította őt Darth Sidious a családjától, s Mault fiatalkorában elkezdte tanítani neki az Erő sötét oldalát. Különleges tetoválásait Darth Sidious tetováltatta rá.Maul nem sokat beszélt, csupán mesterével társalgott.Eljött végső feladata: rabolja el a Királynőt. Erre egyszer próbát tett a Tatooine-on, ám akkor Qui-Gon Jinnel találta szembe magát.Legközelebbi összecsapása Qui-Gonnal és Obi-Wannal a Naboon történt, ahol bár Qui-Gont megölte, Obi-Want nem sikerült. Az ifjú Kenobi egyszerűen félbevágta őt, s mivel a zabrak faj jellemzője, hogy nem érez fájdalmat, ez Maul esetében is így volt. "
     },
     {
         "name_id": "phasma",
-        "name": "Captain Phasma",
-        "side": "DARK",
-        "power": "Fény erő, fénykard",
+        "name": "captain phasma",
+        "side": "Sötét",
+        "power": "Plazma pörkölő",
         "description": "Phasma százados a Csillagok háborúja harmadik trilógiájának egyik fontosabb szereplője. Az Első Rend magas rangú női vezetője, Snoke legfőbb vezér, Kylo Ren és Hux tábornok után/mellett a legmagasabb rangú katona."
     },
     {
         "name_id": "rey",
-        "name": "Rey Palpatine",
-        "side": "LIGHT",
-        "power": "Erő érzékeny, fénykard",
+        "name": "rey palpatine",
+        "side": "Fény",
+        "power": "Fénykard, fény erő, nőies tekintet",
         "description": "Rey egy roncsvadász, akit gyermekkorában hátrahagytak a Jakku bolygón, később Ellenállóként összetűzésbe kerül az Első Renddel, amikor magányának véget vet Poe Dameron droidja, BB-8."
     },
     {
         "name_id": "solo",
-        "name": "Han Solo",
-        "side": "LIGHT",
-        "power": "Fény erő, fénykard",
-        "description": "Solo a történet szerint hivatásos űrcsempész, corélliai származású. Igazi szüleit nem ismeri, űrvándorok között nőtt fel, akiktől számos trükköt és magabiztosságot tanult. Piti tolvajként tengette életét, majd felvételt nyert a Pilótaképző Akadémiára, ahonnan később kicsapták. Ennek ellenére Han a legkiválóbb corélliai pilóták közé tartozik. Első és egyetlen hajóját, a Millenium Falcont Lando Calrissiantól nyerte el élete legszerencsésebb sabacc-partiján Csempészként rendszeres megbízója Jabba volt, akivel akkor romlott meg a viszonya, amikor Han a birodalmiak elől menekülve, letartóztatását elkerülendő kidobta rakományát az űrbe. Jabba ezért a ballépéséért vérdíjat tűzött ki a fejére. Egy Boba Fett nevű profi fejvadász fogta el hibernálva őrizték Jabba palotájában, mígnem a felkelők kiszabadították. Tagja volt annak a felkelő pilótakülönítménynek, mely űrhajóival megsemmisítette a második Halálcsillagot, ezzel a Galaktikus Birodalom hegemón uralkodásának végét okozva."
+        "name": "han solo",
+        "side": "Fény",
+        "power": "Lézer lötykölő, pilóta, csempész tálentum",
+        "description": "Solo a történet szerint hivatásos űrcsempész, corélliai származású. Igazi szüleit nem ismeri, űrvándorok között nőtt fel, akiktől számos trükköt és magabiztosságot tanult. Piti tolvajként tengette életét, majd felvételt nyert a Pilótaképző Akadémiára, ahonnan később kicsapták. Ennek ellenére Han a legkiválóbb corélliai pilóták közé tartozik. Első és egyetlen hajóját, a Millenium Falcont Lando Calrissiantól nyerte el élete legszerencsésebb sabacc-partiján."
     },
     {
         "name_id": "stormtrooper",
-        "name": "Birodalmi rohamosztagos",
-        "side": "Dark",
-        "power": "Fény erő, fénykard",
-        "description": "A birodalmi rohamosztagosok a Csillagok háborúja elképzelt univerzumának egyik embercsoportja, amely a Galaktikus Birodalom hadseregének az elit alakulatát képezi."
+        "name": "birodalmi rohamosztagos",
+        "side": "Sötét",
+        "power": "Foton fröcskölő",
+        "description": "A birodalmi rohamosztagosok a Galaktikus Birodalom hadseregének az elit alakulatát képezi."
     },
     {
         "name_id": "yoda",
-        "name": "Yoda",
-        "side": "LIGHT",
-        "power": "Fény erő, fénykard",
-        "description": "Yoda Mester, a valaha volt egyik legnagyobb Jedi, a legbölcsebb, legtiszteltebb tagja a Jedi Tanácsnak. Minden jedit ő tanított.50 évesen lett Jedi Lovag, 100 évesen pedig mester volt.Mivel neki volt a legfontosabb a véleménye a Tanácsban, ezért nagy szerepe volt abban, hogy Anakin Skywalker kitanításának engedélyét visszautasította a Tanács. Később, Qui-Gon halála után Obi-Wannak mégis megegngedték, hogy kitanítsa Anakint."
+        "name": "yoda",
+        "side": "Fény",
+        "power": "Fény erő, fénykard, bölcsesség",
+        "description": "Yoda Mester, a valaha volt egyik legnagyobb Jedi, a legbölcsebb, legtiszteltebb tagja a Jedi Tanácsnak. Minden jedit ő tanított.50 évesen lett Jedi Lovag, 100 évesen pedig mester volt."
     }
 ]

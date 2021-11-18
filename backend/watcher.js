@@ -4,7 +4,7 @@ const { exec } = require('child_process');                      // ezzel tudunk 
 let run = false;
 chokidar.watch('./src').on('all', (event, path) => {            // csak az src-ben figyel, de mindent
     if (run) {
-        exec('docker restart magazine_api_vizsgaremek', (e, s) => {
+        exec('docker restart webstarwars-api-felveteli', (e, s) => {
             if (e) {
                 return console.error(e);
             }
