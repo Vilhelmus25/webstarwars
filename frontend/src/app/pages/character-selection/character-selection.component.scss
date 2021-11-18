@@ -112,6 +112,12 @@ position: relative;
     background-color:rgba(0,0,0,0);
 }
 
+.simulateButton{
+    width:40%;
+    position: static;
+    
+}
+
 .rightSide{
     position: relative;
 }
@@ -255,6 +261,12 @@ position: relative;
     font-family: 'PoppinsBlack';
     font-size: 20px;
     color: map.get(colors.$colors, "white");
+}
+
+.simulateFight{
+    font-family: 'StarJedi';
+    font-size: 20px;
+    color: map.get(colors.$colors, "black");
 }
 
 //------------------------------------------------------------------
