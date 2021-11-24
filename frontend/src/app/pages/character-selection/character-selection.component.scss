@@ -113,9 +113,12 @@ position: relative;
 }
 
 .simulateButton{
-    width:40%;
-    position: static;
-    
+    position: sticky;
+    width:20%;
+    left:42%;
+    top:90%;
+    border-color:rgba(0,0,0,0);
+    background: linear-gradient(to right, map.get(colors.$colors, "blue"), map.get(colors.$colors, "red")) right;
 }
 
 .rightSide{

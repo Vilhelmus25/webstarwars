@@ -26,6 +26,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   left: String = "left";
   right: String = "right";
   indexCharacter: number = 0;
+  selectedCharacter = "";
 
   constructor(
     public userService: UserService,
@@ -119,5 +120,10 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   getCharacterSide(side: String): String {
     return side;
   }
-
+  setActive(): void {
+    if (this.selectedCharacter != this.characterList[this.indexCharacter].name) {
+      let simulateButton = document.querySelector("simulateButton");
+      this.selectedCharacter = this.characterList[this.indexCharacter].name;
+    }
+  }
 }

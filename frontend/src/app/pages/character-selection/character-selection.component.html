@@ -119,9 +119,6 @@
                                 <span class="descriptionContentText py-4">{{characterList[indexCharacter].description}}
                                 </span>
                             </div>
-                            <button class="btn btn-info simulateButton d-flex justify-content-center">
-                                <span class="simulateFight">Küzdelem szimulálása</span>
-                            </button>
                         </div>
                         <div class="col-6">
 
@@ -133,5 +130,8 @@
                 </div>
             </div>
         </div>
+        <button class="btn btn-info simulateButton" (click)="setActive()">
+            <span class="simulateFight">Küzdelem szimulálása</span>
+        </button>
     </div>
 </div>
