@@ -9,6 +9,7 @@ import { ConfigService } from 'src/app/services/config.service';
 import { UserService } from 'src/app/services/user.service';
 import { LoginComponent } from '../login/login.component';
 import { Swiper, SwiperOptions, Navigation, Pagination } from 'swiper';
+import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 
 
 @Component({
@@ -122,8 +123,8 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   }
   setActive(): void {
     if (this.selectedCharacter != this.characterList[this.indexCharacter].name) {
-      let simulateButton = document.querySelector("simulateButton");
       this.selectedCharacter = this.characterList[this.indexCharacter].name;
+      //let simulateButton = document.getElementById('#simulateButton')?.style.color();
     }
   }
 }
