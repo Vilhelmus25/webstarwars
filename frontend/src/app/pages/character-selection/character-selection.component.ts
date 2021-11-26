@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Characters } from 'src/app/models/characters';
@@ -28,6 +28,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   right: String = "right";
   indexCharacter: number = 0;
   selectedCharacter = "";
+  alreadySelected: boolean = false;
 
   constructor(
     public userService: UserService,
@@ -35,7 +36,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     public characterService: CharactersService,
     public router: Router,
     public auth: AuthService,
-
+    private renderer: Renderer2,
   ) {
     super(config, auth, router);
     this.characterList$.subscribe(itemList => {
@@ -121,10 +122,16 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   getCharacterSide(side: String): String {
     return side;
   }
-  setActive(): void {
-    if (this.selectedCharacter != this.characterList[this.indexCharacter].name) {
-      this.selectedCharacter = this.characterList[this.indexCharacter].name;
-      //let simulateButton = document.getElementById('#simulateButton')?.style.color();
-    }
+  selectCharacter(): void {
+    //   if (this.selectedCharacter != this.characterList[this.indexCharacter].name) {
+    //     this.selectedCharacter = this.characterList[this.indexCharacter].name;
+    //     let parent: HTMLElement | any = document.getElementById('#chooseCharacter');
+    //     const child = parent.children[1];
+    //     this.renderer.setStyle(child, 'background-color', '#F7B500');
+    //   }
+    this.alreadySelected = true;
+  }
+  fight(): void {
+
   }
 }

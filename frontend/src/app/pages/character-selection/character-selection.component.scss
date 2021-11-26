@@ -112,6 +112,14 @@ position: relative;
     background-color:rgba(0,0,0,0);
 }
 
+.selectedButton{
+    width:30%;
+    border-width: 2px;
+    border-radius:10px;
+    border-color: map.get(colors.$colors, "yellow");
+    background-color: map.get(colors.$colors, "yellow");
+}
+
 .simulateButton{
     position: sticky;
     width:20%;

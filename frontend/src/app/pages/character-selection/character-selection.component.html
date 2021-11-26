@@ -107,8 +107,13 @@
                                 <span class="heroName align-items-center mb-4">{{characterList[indexCharacter].name}}
                                 </span>
 
-                                <div class="pt-5">
-                                    <button class="btn btn-info chooseButton">Kiválasztom</button>
+                                <div class="pt-5" *ngIf="!alreadySelected">
+                                    <button class="btn btn-info chooseButton" id="chooseCharacter"
+                                        (click)="selectCharacter()">Kiválasztom</button>
+                                </div>
+                                <div class="pt-5" *ngIf="alreadySelected">
+                                    <button class="btn btn-info selectedButton"
+                                        id="selectedCharacter">Kiválasztom</button>
                                 </div>
                                 <div class="pt-4">
                                     <div class="descriptionSquare ">
@@ -130,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-info" id="simulateButton" (click)="setActive()">
+        <button class="btn btn-info" class="simulateButton" (click)="fight()">
             <span class="simulateFight">Küzdelem szimulálása</span>
         </button>
     </div>
