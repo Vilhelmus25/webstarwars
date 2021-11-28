@@ -27,8 +27,9 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   left: String = "left";
   right: String = "right";
   indexCharacter: number = 0;
-  selectedCharacter = "";
-  alreadySelected: boolean = false;
+  selectedCharacter: String[] = [];
+  alreadySelectedCharacterSide: String[] = [];
+  showSimulateButton: boolean = false;
 
   constructor(
     public userService: UserService,
@@ -64,6 +65,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     });
     swiper.slideNext();
     swiper.slidePrev();
+
   }
 
   onLogout(): void {
@@ -123,15 +125,19 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     return side;
   }
   selectCharacter(): void {
-    //   if (this.selectedCharacter != this.characterList[this.indexCharacter].name) {
-    //     this.selectedCharacter = this.characterList[this.indexCharacter].name;
-    //     let parent: HTMLElement | any = document.getElementById('#chooseCharacter');
-    //     const child = parent.children[1];
-    //     this.renderer.setStyle(child, 'background-color', '#F7B500');
-    //   }
-    this.alreadySelected = true;
+    if (this.selectedCharacter[0] != this.characterList[this.indexCharacter].name) {
+      this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
+      this.alreadySelectedCharacterSide.push(this.characterList[this.indexCharacter].side);
+      // let parent: HTMLElement | any = document.getElementById('#chooseCharacter');
+      // const child = parent.children[1];
+      // this.renderer.setStyle(child, 'background-color', '#F7B500');
+    }
+    if (this.selectedCharacter[1] != this.characterList[this.indexCharacter].name) {
+      if (this.characterList[this.indexCharacter].side !== this.alreadySelectedCharacterSide[0])
+        this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
+    }
   }
   fight(): void {
-
+    console.log(this.alreadySelectedCharacterSide[0]);
   }
 }
