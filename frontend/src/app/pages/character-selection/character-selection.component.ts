@@ -128,13 +128,13 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     if (this.selectedCharacter[0] != this.characterList[this.indexCharacter].name) {
       this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
       this.alreadySelectedCharacterSide.push(this.characterList[this.indexCharacter].side);
-      // let parent: HTMLElement | any = document.getElementById('#chooseCharacter');
-      // const child = parent.children[1];
-      // this.renderer.setStyle(child, 'background-color', '#F7B500');
+
     }
     if (this.selectedCharacter[1] != this.characterList[this.indexCharacter].name) {
-      if (this.characterList[this.indexCharacter].side !== this.alreadySelectedCharacterSide[0])
+      if (this.characterList[this.indexCharacter].side !== this.alreadySelectedCharacterSide[0]) {
         this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
+        this.alreadySelectedCharacterSide.push(this.characterList[this.indexCharacter].side);
+      }
     }
   }
   fight(): void {
