@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { JwtInterceptorInterceptor } from './services/jwt-interceptor.interceptor';
 import { CharacterSelectionComponent } from './pages/character-selection/character-selection.component';
+import { SimulateFightComponent } from './pages/simulate-fight/simulate-fight.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CharacterSelectionComponent } from './pages/character-selection/charact
     HomeComponent,
     LoginComponent,
     CharacterSelectionComponent,
+    SimulateFightComponent,
   ],
   imports: [
     BrowserModule,

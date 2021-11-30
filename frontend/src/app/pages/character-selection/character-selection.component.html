@@ -108,20 +108,20 @@
                                 </span>
 
                                 <div class="pt-5"
-                                    *ngIf="(selectedCharacter[0] !== characterList[indexCharacter].name) && (selectedCharacter[1] !== characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] != characterList[indexCharacter].side) && (alreadySelectedCharacterSide[1] != characterList[indexCharacter].side) ">
-                                    <button class="btn btn-info chooseButton" id="chooseCharacter"
+                                    *ngIf="(selectedCharacterName[0] !== characterList[indexCharacter].name) && (selectedCharacterName[1] !== characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] != characterList[indexCharacter].side) && (alreadySelectedCharacterSide[1] != characterList[indexCharacter].side) ">
+                                    <button class="btn btn-info chooseButton"
                                         (click)="selectCharacter()">Kiválasztom</button>
 
                                 </div>
                                 <div class="pt-5"
-                                    *ngIf="(selectedCharacter[0] === characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] == characterList[indexCharacter].side)">
-                                    <button class="btn btn-info selectedButton" id="selectedCharacter"
+                                    *ngIf="(selectedCharacterName[0] === characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] == characterList[indexCharacter].side)">
+                                    <button class="btn btn-info selectedButton"
                                         (click)="selectCharacter()">Kiválasztom</button>
 
                                 </div>
                                 <div class="pt-5"
-                                    *ngIf="(selectedCharacter[1] === characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] != characterList[indexCharacter].side)">
-                                    <button class="btn btn-info selectedButton" id="selectedCharacter"
+                                    *ngIf="(selectedCharacterName[1] === characterList[indexCharacter].name) && (alreadySelectedCharacterSide[0] != characterList[indexCharacter].side)">
+                                    <button class="btn btn-info selectedButton"
                                         (click)="selectCharacter()">Kiválasztom</button>
 
                                 </div>

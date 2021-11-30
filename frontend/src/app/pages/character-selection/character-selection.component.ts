@@ -27,7 +27,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   left: String = "left";
   right: String = "right";
   indexCharacter: number = 0;
-  selectedCharacter: String[] = [];
+  selectedCharacterName: String[] = [];
   alreadySelectedCharacterSide: String[] = [];
   showSimulateButton: boolean = false;
 
@@ -125,14 +125,14 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     return side;
   }
   selectCharacter(): void {
-    if (this.selectedCharacter[0] != this.characterList[this.indexCharacter].name) {
-      this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
+    if (this.selectedCharacterName[0] != this.characterList[this.indexCharacter].name) {
+      this.selectedCharacterName.push(this.characterList[this.indexCharacter].name);
       this.alreadySelectedCharacterSide.push(this.characterList[this.indexCharacter].side);
 
     }
-    if (this.selectedCharacter[1] != this.characterList[this.indexCharacter].name) {
+    if (this.selectedCharacterName[1] != this.characterList[this.indexCharacter].name) {
       if (this.characterList[this.indexCharacter].side !== this.alreadySelectedCharacterSide[0]) {
-        this.selectedCharacter.push(this.characterList[this.indexCharacter].name);
+        this.selectedCharacterName.push(this.characterList[this.indexCharacter].name);
         this.alreadySelectedCharacterSide.push(this.characterList[this.indexCharacter].side);
       }
     }
