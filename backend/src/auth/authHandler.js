@@ -22,7 +22,7 @@ module.exports.login = async (req, res) => {
 
         const verified = await user.verifyPassword(password);
         if (!verified) {
-            throw new Error('Incorrect Credentials!');
+            throw new Error('Sikertelen azonosítás');
         }
 
         const accessToken = jwt.sign({
