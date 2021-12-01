@@ -8,7 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SimulateFightComponent implements OnInit {
 
   @Input() selectedCharacterNameAndSideArray: String[] = [];
-
   constructor() { }
 
   ngOnInit(): void {

@@ -150,6 +150,8 @@
             <button class="btn btn-info" class="simulateButton"
                 (click)="fight(selectedCharacterName[0],selectedCharacterName[1],alreadySelectedCharacterSide[0],alreadySelectedCharacterSide[1])">
                 <span class="simulateFight">Küzdelem szimulálása</span>
+                <app-simulate-fight [selectedCharacterNameAndSideArray]="alreadySelectedCharacterSide" [hidden]>
+                </app-simulate-fight>
                 <!-- <app-simulate-fight [selectedCharacterName]="selectedCharacterName"
                     [alreadySelectedCharacterSide]="alreadySelectedCharacterSide"></app-simulate-fight> -->
             </button>
