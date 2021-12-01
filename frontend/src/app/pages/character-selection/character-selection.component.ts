@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Characters } from 'src/app/models/characters';
@@ -29,7 +29,10 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   indexCharacter: number = 0;
   selectedCharacterName: String[] = [];
   alreadySelectedCharacterSide: String[] = [];
+  selectedCharacterNameAndSideArray: String[] = [];
   showSimulateButton: boolean = false;
+
+  @Output() selectedCharacterData: EventEmitter<any> = new EventEmitter();
 
   constructor(
     public userService: UserService,
@@ -137,7 +140,12 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
       }
     }
   }
-  fight(): void {
-    console.log(this.alreadySelectedCharacterSide[0]);
+  fight(name0: String, name1: String, side0: String, side1: String): void {
+    this.selectedCharacterNameAndSideArray.push(name0, name1, side0, side1);
+    this.selectedCharacterData.emit(this.selectedCharacterNameAndSideArray);
+
+    if (this.alreadySelectedCharacterSide[1] != '') {
+      this.router.navigate(['/simulateFight']);
+    }
   }
 }

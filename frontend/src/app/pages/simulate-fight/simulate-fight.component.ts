@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-simulate-fight',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./simulate-fight.component.scss']
 })
 export class SimulateFightComponent implements OnInit {
+
+  @Input() selectedCharacterNameAndSideArray: String[] = [];
 
   constructor() { }
 
