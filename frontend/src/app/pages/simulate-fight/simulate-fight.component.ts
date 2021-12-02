@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-simulate-fight',
@@ -7,10 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SimulateFightComponent implements OnInit {
 
-  @Input() selectedCharacterNameAndSideArray: String = "asd";
-  constructor() { }
+
+  message!: string;
+
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentMessage.subscribe(message => this.message = message)
 
   }
 

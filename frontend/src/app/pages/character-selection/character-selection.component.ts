@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 import { LoginComponent } from '../login/login.component';
 import { Swiper, SwiperOptions, Navigation, Pagination } from 'swiper';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
+import { DataService } from 'src/app/services/data.service';
 
 
 @Component({
@@ -27,9 +28,11 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   left: String = "left";
   right: String = "right";
   indexCharacter: number = 0;
-  selectedCharacterName: String[] = [];
-  alreadySelectedCharacterSide: String[] = [];
+  selectedCharacterName: string[] = [];
+  alreadySelectedCharacterSide: string[] = [];
   showSimulateButton: boolean = false;
+
+  message!: string;
 
   constructor(
     public userService: UserService,
@@ -37,16 +40,20 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     public characterService: CharactersService,
     public router: Router,
     public auth: AuthService,
-    private renderer: Renderer2,
+    private data: DataService,
+    //private renderer: Renderer2,
   ) {
     super(config, auth, router);
     this.characterList$.subscribe(itemList => {
       this.characterList = itemList;
-      console.log(this.characterList);
+      //console.log(this.characterList);
     });
   }
 
   ngOnInit(): void {
+
+    this.data.currentMessage.subscribe(message => this.message = message);
+
     const swiper = new Swiper('.swiper', {
       modules: [Navigation, Pagination],
       speed: 400,
@@ -137,12 +144,14 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
       }
     }
   }
-  fight(name0: String, name1: String, side0: String, side1: String): void {
+  fight(name0: string, name1: string, side0: string, side1: string): void {
     // this.selectedCharacterNameAndSideArray.push(name0, name1, side0, side1);
     // this.selectedCharacterData.emit(this.selectedCharacterNameAndSideArray);
 
     if (this.alreadySelectedCharacterSide[1] != '') {
       this.router.navigate(['/simulateFight']);
     }
+    this.message = name0;
+    this.data.changeMessage(this.alreadySelectedCharacterSide);
   }
 }
