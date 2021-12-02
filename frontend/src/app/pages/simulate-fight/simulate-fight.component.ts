@@ -7,10 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SimulateFightComponent implements OnInit {
 
-  @Input() selectedCharacterNameAndSideArray: String[] = [];
+  @Input() selectedCharacterNameAndSideArray: String = "asd";
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
