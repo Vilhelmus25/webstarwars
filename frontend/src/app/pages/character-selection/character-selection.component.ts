@@ -32,7 +32,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
   alreadySelectedCharacterSide: string[] = [];
   showSimulateButton: boolean = false;
 
-  message!: string;
+  message!: string[];
 
   constructor(
     public userService: UserService,
@@ -151,7 +151,7 @@ export class CharacterSelectionComponent extends LoginComponent implements OnIni
     if (this.alreadySelectedCharacterSide[1] != '') {
       this.router.navigate(['/simulateFight']);
     }
-    this.message = name0;
-    this.data.changeMessage(this.alreadySelectedCharacterSide);
+    this.message.push(name0, name1, side0, side1);
+    this.data.changeMessage(this.message);
   }
 }

@@ -9,7 +9,7 @@ import { DataService } from 'src/app/services/data.service';
 export class SimulateFightComponent implements OnInit {
 
 
-  message!: string;
+  message!: string[];
 
   constructor(private data: DataService) { }
 
