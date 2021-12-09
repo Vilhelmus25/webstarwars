@@ -43,3 +43,107 @@
 .logoutIcon{
 
 }
+
+
+// Fonts -----------------------------------------------------------
+
+.headerText{
+    margin-top:auto;
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}
+.userNameText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}
+.logoutText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+    
+}
+.selectTwoSoldierText{
+    font-family: 'PoppinsBlack';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+
+
+.iconTitle{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "yellow");
+}
+
+.quoteFont{
+    font-family: 'StarJedi';
+    font-size: 60px;
+    color: map.get(colors.$colors, "white");
+}
+
+.sideLeftFont{
+    font-family: 'PoppinsBlack';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+.sideRightFont{
+    font-family: 'PoppinsBlack';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+.versusFont{
+    font-family: 'DistantGalaxy';
+    font-size: 150px;
+    color: map.get(colors.$colors, "white");
+}
+.nameLeftFont{
+    font-family: 'StarJedi';
+    font-size: 40px;
+    text-transform: capitalize;
+    color: map.get(colors.$colors, "white");
+}
+.nameRightFont{
+    font-family: 'StarJedi';
+    font-size: 40px;
+    text-transform: capitalize;
+    color: map.get(colors.$colors, "white");
+}
+.leftPercentFont{
+    font-family: 'PoppinsBold';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+.rightPercentFont{
+    font-family: 'PoppinsBold';
+    font-size: 24px;
+    color: map.get(colors.$colors, "white");
+}
+
+.descriptionText{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+}
+.descriptionContentText{
+    font-family: 'PoppinsRegular';
+    font-size: 16px;
+    color: map.get(colors.$colors, "white");
+}
+
+.characterSide{
+    font-family: 'PoppinsBlack';
+    font-size: 20px;
+    color: map.get(colors.$colors, "white");
+}
+
+.simulateFight{
+    font-family: 'StarJedi';
+    font-size: 20px;
+    color: map.get(colors.$colors, "black");
+}
+
+//------------------------------------------------------------------
