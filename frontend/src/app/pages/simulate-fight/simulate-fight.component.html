@@ -12,17 +12,33 @@
             </div>
             <hr class="col-12 solid">
         </div>
-        <div class="quoteFont">
-            <p>A tudás legyen veled!</p>
+        <div class="quotePosition d-flex justify-content-center">
+            <p class="quoteFont">A tudás legyen veled!</p>
         </div>
-        <div class="versus">
-            <p class="nameLeftFont">{{message[0]}}</p>
-            <p class="nameRightFont">{{message[1]}}</p>
-            <p class="sideLeftFont">{{message[2]}}</p>
-            <p class="sideRightFont">{{message[3]}}</p>
-            <p class="versusFont">VS</p>
-            <p class="leftPercentFont">{{leftPercent}}</p>
-            <p class="rightPercentFont">{{rightPercent}}</p>
+        <div class="battleGround col-12 d-flex justify-content-between">
+            <div class="leftSide">
+                <p class="sideLeftFont">{{opponents[2]}} oldal</p>
+                <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
+                    <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[0]"
+                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                </div>
+                <p class="nameLeftFont">{{opponents[0]}}</p>
+                <p class="leftPercentFont">{{leftPercent}}%</p>
+            </div>
+            <div class="versus">
+                <p class="versusFont">VS</p>
+            </div>
+            <div class="rightSide">
+                <p class="sideRightFont">{{opponents[3]}} oldal</p>
+                <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
+                    <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[1]"
+                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                </div>
+                <p class="nameRightFont">{{opponents[1]}}</p>
+                <p class="rightPercentFont">{{rightPercent}}%</p>
+            </div>
+
+
         </div>
     </div>
 </div>

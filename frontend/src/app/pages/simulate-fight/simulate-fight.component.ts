@@ -20,7 +20,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
-  message!: string[];
+  opponents!: string[];
   leftPercent: number = 100;
   rightPercent: number = 100;
 
@@ -40,7 +40,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.data.currentMessage.subscribe(message => this.message = message)
+    this.data.currentMessage.subscribe(message => this.opponents = message)
 
   }
 

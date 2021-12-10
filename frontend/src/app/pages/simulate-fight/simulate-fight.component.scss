@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+// Header ---------------------------------------------------------------------
 
 .logoutIcon{
     background: url("/assets/logout.svg") no-repeat;
@@ -38,12 +39,26 @@
 .headerRight{
 
 }
+.solid{
+    border-top: 3px solid;
+    border-color: map.get(colors.$colors, "white");
+    margin-top: 2rem;
+    position: absolute;
+}
+// ----------------------------------------------------------
 
+// Items    ------------------------------------------------------------
 
-.logoutIcon{
+.quotePosition{
 
 }
 
+.characterImage{
+   max-width: 60vw;
+   max-height: 60vh;
+}
+
+// ---------------------------------------------------------------------
 
 // Fonts -----------------------------------------------------------
 
