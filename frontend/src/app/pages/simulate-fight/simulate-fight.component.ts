@@ -41,7 +41,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.opponents = message)
-
+    console.log(this.opponents[2]);
   }
 
 }

@@ -17,25 +17,37 @@
         </div>
         <div class="battleGround col-12 d-flex justify-content-between">
             <div class="leftSide">
-                <p class="sideLeftFont">{{opponents[2]}} oldal</p>
-                <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
-                    <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[0]"
-                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                <div class="leftSideCharacter">
+                    <p class="sideLeftFont">{{opponents[2]}} oldal</p>
+                    <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
+                        <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[0]"
+                            src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                    </div>
+                    <div class="circleLight" *ngIf="opponents[2]==='Fény'"></div>
+                    <div class="circleDark" *ngIf="opponents[2]==='Sötét'"></div>
                 </div>
-                <p class="nameLeftFont">{{opponents[0]}}</p>
-                <p class="leftPercentFont">{{leftPercent}}%</p>
+                <div class="leftSideNameAndLife">
+                    <p class="nameLeftFont">{{opponents[0]}}</p>
+                    <p class="leftPercentFont">{{leftPercent}}%</p>
+                </div>
             </div>
             <div class="versus">
-                <p class="versusFont">VS</p>
+                <p class="versusFont d-flex align-item-center mt-6">VS</p>
             </div>
             <div class="rightSide">
-                <p class="sideRightFont">{{opponents[3]}} oldal</p>
-                <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
-                    <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[1]"
-                        src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                <div class="rightSideCharacter">
+                    <p class="sideRightFont mr-6">{{opponents[3]}} oldal</p>
+                    <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
+                        <img class="d-block mx-0 characterImage" *ngIf="character.name === opponents[1]"
+                            src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                    </div>
+                    <div class="circleLight" *ngIf="opponents[3]==='Fény'"></div>
+                    <div class="circleDark" *ngIf="opponents[3]==='Sötét'"></div>
                 </div>
-                <p class="nameRightFont">{{opponents[1]}}</p>
-                <p class="rightPercentFont">{{rightPercent}}%</p>
+                <div class="rightSideNameAndLife">
+                    <p class="nameRightFont d-flex justify-content-end">{{opponents[1]}}</p>
+                    <p class="rightPercentFont">{{rightPercent}}%</p>
+                </div>
             </div>
 
 
