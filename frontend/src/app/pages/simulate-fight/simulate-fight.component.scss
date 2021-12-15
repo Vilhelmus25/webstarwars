@@ -60,30 +60,51 @@
 }
 
 .characterImage{
-    position: absolute;
-   max-width: 55vw;
-   max-height: 55vh;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+//    max-width: 55%;
+//    max-height: 55%;
+//    margin: auto;
 }
 
-.circleLight {
-    height: 28vw;
-    width: 28vw;
+.circleLightLeft {
+    height: 22vw;
+    width: 22vw;
     background-color: map.get(colors.$colors, "white");
     border-radius: 50%;
-    position: relative;
-    margin-top: 25%;
-    margin-left: auto;
-    bottom:5vh;
+    position: fixed;
+    margin-top: 0%;
+    top: 30vh
   }
-.circleDark {
-    height: 28vw;
-    width: 28vw;
+.circleDarkLeft {
+    height: 22vw;
+    width: 22vw;
     background-color: map.get(colors.$colors, "gray");
     border-radius: 50%;
-    position: relative;
-    margin-top: 25%;
+    position: fixed;
+    margin-top: 0%;
+    top: 30vh
+    // bottom:5vh;
+  }
+.circleLightRight {
+    height: 22vw;
+    width: 22vw;
+    background-color: map.get(colors.$colors, "white");
+    border-radius: 50%;
+    position: fixed;
     margin-left: auto;
-    bottom:5vh;
+    top: 30vh
+  }
+.circleDarkRight {
+    height: 22vw;
+    width: 22vw;
+    background-color: map.get(colors.$colors, "gray");
+    border-radius: 50%;
+    position: fixed;
+    margin-left: 13.05%;
+    top: 30vh
+    // bottom:5vh;
   }
 
 // ---------------------------------------------------------------------
@@ -132,11 +153,15 @@
     font-family: 'PoppinsBlack';
     font-size: 24px;
     color: map.get(colors.$colors, "white");
+    margin-left:21%;
 }
 .sideRightFont{
     font-family: 'PoppinsBlack';
     font-size: 24px;
     color: map.get(colors.$colors, "white");
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right:21%;
 }
 .versusFont{
     font-family: 'DistantGalaxy';
@@ -146,13 +171,11 @@
 .nameLeftFont{
     font-family: 'StarJedi';
     font-size: 40px;
-    text-transform: capitalize;
     color: map.get(colors.$colors, "white");
 }
 .nameRightFont{
     font-family: 'StarJedi';
     font-size: 40px;
-    text-transform: capitalize;
     color: map.get(colors.$colors, "white");
 }
 .leftPercentFont{
