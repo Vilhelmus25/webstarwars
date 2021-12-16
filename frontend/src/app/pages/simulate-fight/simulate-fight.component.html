@@ -22,7 +22,7 @@
                     <div class="circleLightLeft" *ngIf="opponents[2]==='Fény'"></div>
                     <div class="circleDarkLeft" *ngIf="opponents[2]==='Sötét'"></div>
                     <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
-                        <img class="d-block mx-0 characterImage img-fluid " *ngIf="character.name === opponents[0]"
+                        <img class="d-block characterImageLeft img-fluid " *ngIf="character.name === opponents[0]"
                             src='../../../assets/{{character.name_id}}.png' alt="First slide">
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         <div class="circleLightRight" *ngIf="opponents[3]==='Fény'"></div>
                         <div class="circleDarkRight" *ngIf="opponents[3]==='Sötét'"></div>
                         <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
-                            <img class="d-block mx-0 characterImage img-fluid" *ngIf="character.name === opponents[1]"
+                            <img class="d-block characterImageRight img-fluid" *ngIf="character.name === opponents[1]"
                                 src='../../../assets/{{character.name_id}}.png' alt="First slide">
                         </div>
                     </div>

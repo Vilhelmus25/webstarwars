@@ -59,13 +59,29 @@
     margin: auto;
 }
 
-.characterImage{
-    max-width: 100%;
+.characterImageLeft{
+    max-width: 80%;
     height: auto;
     position: relative;
+    transform: rotateY(180deg);
+    margin-left: -10%;
+    margin-right:0%;
+
 //    max-width: 55%;
 //    max-height: 55%;
 //    margin: auto;
+}
+.characterImageRight{
+    max-width: 80%;
+    height: auto;
+    position: relative;
+    margin-left:20%;
+}
+
+.images{
+    max-width: 100%;
+    height: auto;
+    position: relative;
 }
 
 .circleLightLeft {
