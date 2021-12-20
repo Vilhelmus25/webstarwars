@@ -44,4 +44,8 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
     console.log(this.opponents[2]);
   }
 
+  fightSimulator(forReturnDummy: number): number {
+    return forReturnDummy
+  }
+
 }
