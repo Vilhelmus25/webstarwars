@@ -28,6 +28,12 @@
                 </div>
                 <div class="leftSideNameAndLife">
                     <p class="nameLeftFont">{{opponents[0]}}</p>
+                    <div class="barBaseLightLeft" *ngIf="opponents[3]==='Fény'">
+                        <div class=" barValueLightLeft"></div>
+                    </div>
+                    <div class="barBaseDarkLeft" *ngIf="opponents[3]==='Sötét'">
+                        <div class=" barValueDarkLeft"></div>
+                    </div>
                     <p class="leftPercentFont">{{leftPercent}}%</p>
                 </div>
             </div>
@@ -48,6 +54,12 @@
                 </div>
                 <div class="rightSideNameAndLife">
                     <p class="nameRightFont d-flex justify-content-end">{{opponents[1]}}</p>
+                    <div class="barBaseLightRight" *ngIf="opponents[3]==='Fény'">
+                        <div class=" barValueLightRight"></div>
+                    </div>
+                    <div class="barBaseDarkRight" *ngIf="opponents[3]==='Sötét'">
+                        <div class=" barValueDarkRight"></div>
+                    </div>
                     <p class="rightPercentFont d-flex justify-content-end">{{rightPercent}}%</p>
                 </div>
             </div>

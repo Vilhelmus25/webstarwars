@@ -123,6 +123,39 @@
     // bottom:5vh;
   }
 
+.barBaseLightRight{
+    width: 30vw;
+    height: 1vw;
+    margin-left: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "white");
+}
+.barBaseDarkRight{
+    width: 30vw;
+    height: 1vw;
+    margin-left: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "white");
+}
+.barBaseLightLeft{
+    width: 30vw;
+    height: 1vw;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "white");
+}
+.barBaseDarkLeft{
+    width: 30vw;
+    height: 1vw;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "white");
+}
+
 // ---------------------------------------------------------------------
 
 // Fonts -----------------------------------------------------------
