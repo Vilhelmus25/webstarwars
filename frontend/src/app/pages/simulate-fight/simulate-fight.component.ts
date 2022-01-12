@@ -21,8 +21,11 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
   opponents!: string[];
+  leftBarSize$: string = "30vw";
+  rightBarSize$: string = "30vw";
   leftPercent: number = 100;
   rightPercent: number = 100;
+  loser: String = "";
 
   constructor(public userService: UserService,
     public config: ConfigService,
@@ -42,10 +45,42 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.opponents = message)
     console.log(this.opponents[2]);
+    setTimeout(() => this.fightSimulator(this.leftBarSize$, this.rightBarSize$), 3000);
   }
 
-  fightSimulator(forReturnDummy: number): number {
-    return forReturnDummy
-  }
+  fightSimulator(leftBarSize: string, rightBarSize: string): String {
+    let victorSide: String = "";
+    let currentLeftBarSizeInNumber: number = 30;
+    let currentRightBarSizeInNumber: number = 30;
 
+    let int = setInterval(() => {
+      currentLeftBarSizeInNumber = parseInt(leftBarSize.slice(0, leftBarSize.search('vw')));
+      console.log(currentLeftBarSizeInNumber);
+      currentRightBarSizeInNumber = parseInt(rightBarSize.slice(0, rightBarSize.search('vw')));
+      if (currentLeftBarSizeInNumber <= 0 || currentRightBarSizeInNumber <= 0) {
+        if (currentLeftBarSizeInNumber <= 0) {
+          victorSide = "left";
+        }
+        if (currentRightBarSizeInNumber <= 0) {
+          victorSide = "right";
+        }
+        this.loser = victorSide;
+      } else {
+        currentLeftBarSizeInNumber = currentLeftBarSizeInNumber - (Math.round(1 + Math.random() * 5) - 1);
+        currentRightBarSizeInNumber = currentRightBarSizeInNumber - (Math.round(1 + Math.random() * 5) - 1);
+        leftBarSize = currentLeftBarSizeInNumber.toLocaleString().concat("vw");
+
+        rightBarSize = currentRightBarSizeInNumber.toString().concat("vw");
+        console.log(leftBarSize);
+        console.log(rightBarSize);
+      }
+      console.log(this.loser);
+      if (this.loser != "") {
+        clearInterval(int);
+      }
+    }, 1000);
+
+
+    return victorSide;
+  }
 }

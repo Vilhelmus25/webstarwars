@@ -156,6 +156,41 @@
     background-color: map.get(colors.$colors, "white");
 }
 
+.barValueLightLeft{
+    // :current{
+    // width: attr(left-percentage)/100;
+    // }
+    height: 1vw;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "yellow");
+}
+.barValueDarkLeft{
+            
+    height: 1vw;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "red");
+}
+
+.barValueLightRight{
+    height: 1vw;
+    margin-left: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "yellow");
+}
+
+.barValueDarkRight{
+    height: 1vw;
+    margin-left: auto;
+    margin-bottom: 1vh;
+    border-radius: 3px;
+    background-color: map.get(colors.$colors, "reed");
+}
+
 // ---------------------------------------------------------------------
 
 // Fonts -----------------------------------------------------------
