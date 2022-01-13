@@ -12,6 +12,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { JwtInterceptorInterceptor } from './services/jwt-interceptor.interceptor';
 import { CharacterSelectionComponent } from './pages/character-selection/character-selection.component';
 import { SimulateFightComponent } from './pages/simulate-fight/simulate-fight.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SimulateFightComponent } from './pages/simulate-fight/simulate-fight.co
     HttpClientModule,
     FormsModule,
     SwiperModule,
+    CommonModule,
   ],
   providers: [
     {

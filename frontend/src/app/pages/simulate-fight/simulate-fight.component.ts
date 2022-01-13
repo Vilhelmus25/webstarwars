@@ -21,11 +21,12 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
   opponents!: string[];
-  leftBarSize$: string = "30vw";
-  rightBarSize$: string = "30vw";
+  leftBarSize$: string = "10vw";
+  rightBarSize$: string = "20vw";
   leftPercent: number = 100;
   rightPercent: number = 100;
   loser: String = "";
+  observable: Observable<string> | any;
 
   constructor(public userService: UserService,
     public config: ConfigService,
@@ -45,7 +46,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.opponents = message)
     console.log(this.opponents[2]);
-    setTimeout(() => this.fightSimulator(this.leftBarSize$, this.rightBarSize$), 3000);
+    setTimeout(() => this.fightSimulator(this.leftBarSize$, this.rightBarSize$), 1000);
   }
 
   fightSimulator(leftBarSize: string, rightBarSize: string): String {
@@ -53,7 +54,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
     let currentLeftBarSizeInNumber: number = 30;
     let currentRightBarSizeInNumber: number = 30;
 
-    let int = setInterval(() => {
+    this.observable = setInterval(() => {
       currentLeftBarSizeInNumber = parseInt(leftBarSize.slice(0, leftBarSize.search('vw')));
       console.log(currentLeftBarSizeInNumber);
       currentRightBarSizeInNumber = parseInt(rightBarSize.slice(0, rightBarSize.search('vw')));
@@ -76,7 +77,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit {
       }
       console.log(this.loser);
       if (this.loser != "") {
-        clearInterval(int);
+        clearInterval(this.observable);
       }
     }, 1000);
 

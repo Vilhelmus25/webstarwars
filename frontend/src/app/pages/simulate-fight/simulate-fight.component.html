@@ -28,14 +28,14 @@
                 </div>
                 <div class="leftSideNameAndLife">
                     <p class="nameLeftFont">{{opponents[0]}}</p>
-                    <div class="barBaseLightLeft"
-                        *ngIf="opponents[2]==='Fény'; let leftBarSize of leftBarSize$ | async">
-                        <div class=" barValueLightLeft" [style.width]="leftBarSize" *ngIf="opponents[2]==='Fény'">
+                    <div class="barBaseLightLeft" *ngIf="opponents[2]==='Fény'">
+                        <div *ngIf="opponents[2]==='Fény'; let leftBarSize of leftBarSize$ | async"
+                            class=" barValueLightLeft" [style.width]="leftBarSize">
                         </div>
                     </div>
-                    <div class="barBaseDarkLeft"
-                        *ngIf="opponents[2]==='Sötét'; let leftBarSize of leftBarSize$ | async">
-                        <div class=" barValueDarkLeft" [style.width]="leftBarSize" *ngIf=" opponents[2]==='Sötét'">
+                    <div class="barBaseDarkLeft" *ngIf="opponents[2]==='Sötét'">
+                        <div *ngIf=" opponents[2]==='Sötét'; let leftBarSize of leftBarSize$ | async"
+                            class=" barValueDarkLeft" [style.width]="leftBarSize">
                         </div>
                     </div>
                     <p class=" leftPercentFont">{{leftPercent}}%</p>
@@ -58,14 +58,14 @@
                 </div>
                 <div class="rightSideNameAndLife">
                     <p class="nameRightFont d-flex justify-content-end">{{opponents[1]}}</p>
-                    <div class="barBaseLightRight"
-                        *ngIf="opponents[3]==='Fény'; let rightBarSize of rightBarSize$ | async">
-                        <div class=" barValueLightRight" [style.width]="rightBarSize" *ngIf="opponents[3]==='Fény'">
+                    <div class="barBaseLightRight" *ngIf="opponents[3]==='Fény'">
+                        <div *ngIf=" opponents[3]==='Fény' ; let rightBarSize of rightBarSize$ | async"
+                            class=" barValueLightRight" [style.width]="rightBarSize">
                         </div>
                     </div>
-                    <div class="barBaseDarkRight"
-                        *ngIf="opponents[3]==='Sötét'; let rightBarSize of rightBarSize$ | async">
-                        <div class=" barValueDarkRight" [style.width]="rightBarSize" *ngIf="opponents[3]==='Sötét'">
+                    <div class="barBaseDarkRight" *ngIf="opponents[3]==='Sötét'">
+                        <div *ngIf=" opponents[3]==='Sötét' ; let rightBarSize of rightBarSize$ | async"
+                            class=" barValueDarkRight" [style.width]="rightBarSize">
                         </div>
                     </div>
                     <p class="rightPercentFont d-flex justify-content-end">{{rightPercent}}%</p>
