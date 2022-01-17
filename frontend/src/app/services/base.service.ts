@@ -11,6 +11,7 @@ export class BaseService<T extends { _id?: string }>{
   entity: string = '';
 
   constructor(
+
     public config: ConfigService,
     public http: HttpClient
   ) { }
