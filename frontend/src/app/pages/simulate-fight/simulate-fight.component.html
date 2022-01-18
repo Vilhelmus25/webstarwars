@@ -30,16 +30,15 @@
                     <p class="nameLeftFont">{{opponents[0]}}</p>
                     <div class="barBaseLightLeft" *ngIf="opponents[2]==='Fény'">
                         <div *ngIf="opponents[2]==='Fény'" class=" barValueLightLeft"
-                            [ngStyle]="{'width': leftBarSize + 'vw'}">>
+                            [ngStyle]="{'width': leftBarSize + 'vw'}">
                         </div>
                     </div>
                     <div class="barBaseDarkLeft" *ngIf="opponents[2]==='Sötét'">
                         <div *ngIf=" opponents[2]==='Sötét'" class=" barValueDarkLeft"
-                            [ngStyle]="{'width': leftBarSize + 'vw'}">>
-                            {{leftBarSize}}
+                            [ngStyle]="{'width': leftBarSize + 'vw'}">
                         </div>
                     </div>
-                    <p class=" leftPercentFont">{{leftPercent}}%</p>
+                    <p class=" leftPercentFont" [ngStyle]="{'margin-left': leftBarSize + 'vw'}">{{leftPercent}}%</p>
                 </div>
             </div>
             <div class="versus">
@@ -66,10 +65,11 @@
                     </div>
                     <div class="barBaseDarkRight" *ngIf="opponents[3]==='Sötét'">
                         <div *ngIf=" opponents[3]==='Sötét'" class=" barValueDarkRight"
-                            [ngStyle]="{'width': rightBarSize + 'vw'}">>
+                            [ngStyle]="{'width': rightBarSize + 'vw'}">
                         </div>
                     </div>
-                    <p class="rightPercentFont d-flex justify-content-end">{{rightPercent}}%</p>
+                    <p class="rightPercentFont d-flex justify-content-end"
+                        [ngStyle]="{'margin-right': rightBarSize + 'vw'}">{{rightPercent}}%</p>
                 </div>
             </div>
 

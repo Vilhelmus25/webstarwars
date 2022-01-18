@@ -80,6 +80,8 @@ export class SimulateFightComponent extends LoginComponent implements OnInit, Co
         currentRightBarSizeInNumber = currentRightBarSizeInNumber - (Math.round(1 + Math.random() * 5) - 1);
         leftBarSize = currentLeftBarSizeInNumber;
         rightBarSize = currentRightBarSizeInNumber;
+        this.leftPercent = Math.round(currentLeftBarSizeInNumber / 30 * 100);
+        this.rightPercent = Math.round(currentRightBarSizeInNumber / 30 * 100);
         this.leftBarSize = currentLeftBarSizeInNumber;
         this.rightBarSize = currentRightBarSizeInNumber;
         console.log("Left Side: " + this.leftBarSize);
