@@ -13,6 +13,7 @@ import { JwtInterceptorInterceptor } from './services/jwt-interceptor.intercepto
 import { CharacterSelectionComponent } from './pages/character-selection/character-selection.component';
 import { SimulateFightComponent } from './pages/simulate-fight/simulate-fight.component';
 import { CommonModule } from '@angular/common';
+import { WinnerComponent } from './pages/winner/winner.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     LoginComponent,
     CharacterSelectionComponent,
     SimulateFightComponent,
+    WinnerComponent,
   ],
   imports: [
     BrowserModule,

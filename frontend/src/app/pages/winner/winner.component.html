@@ -1,0 +1,38 @@
+<div class="simulateFightBackground w-100 d-flex">
+    <div class="col-10 my-0 mx-auto py-3">
+        <div class="headerMain d-flex justify-content-between">
+            <div class="headerLeft d-flex px-1">
+                <a class="userIcon px-2"></a>
+                <p class="userNameText px-2">{{currentUser$.lastName}}
+                    {{currentUser$.firstName}}</p>
+            </div>
+            <div class="headerRight d-flex px-1">
+                <p class="logoutText px-2">Űrhajó elhagyás</p>
+                <a class="logoutIcon" href="" click="onLogout()"></a>
+            </div>
+            <hr class="col-12 solid">
+        </div>
+        <div class="quotePosition d-flex justify-content-center">
+            <p class="quoteFont">A csata nyertese</p>
+        </div>
+        <div class="battleGround col-12 d-flex justify-content-between">
+            <div class="leftSide">
+                <div class="leftSideCharacter">
+                    <p class="sideLeftFont">{{opponents[2]}} oldal</p>
+                    <div class="circleLightLeft" *ngIf="opponents[2]==='Fény'"></div>
+                    <div class="circleDarkLeft" *ngIf="opponents[2]==='Sötét'"></div>
+                    <div *ngFor="let character of characterList$ | async; let indexOfElement=index">
+                        <img class="d-block characterImageLeft img-fluid " *ngIf="character.name === opponents[0]"
+                            src='../../../assets/{{character.name_id}}.png' alt="First slide">
+                    </div>
+                </div>
+                <div class="leftSideNameAndLife">
+                    <p class="nameLeftFont">{{opponents[0]}}</p>
+                </div>
+            </div>
+            <div class="versus">
+                <p class="versusFont d-flex align-item-center mt-6">VS</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CharacterSelectionComponent } from './pages/character-selection/character-selection.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SimulateFightComponent } from './pages/simulate-fight/simulate-fight.component';
+import { WinnerComponent } from './pages/winner/winner.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'simulateFight',
     component: SimulateFightComponent,
+  },
+  {
+    path: 'winnerPage',
+    component: WinnerComponent,
   },
   {
     path: '**',
