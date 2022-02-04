@@ -20,7 +20,7 @@ export class WinnerComponent extends LoginComponent implements OnInit, ConfigSer
   currentUser$: User = this.auth.getUser();
   characterList$: Observable<Characters[]> = this.characterService.getAll();
   characterList: Characters[] = [];
-  opponents!: string[];
+  theWinner!: string[];
   subscription: Subscription = new Subscription;
   message!: string[];
   winner: string = "";
@@ -43,7 +43,7 @@ export class WinnerComponent extends LoginComponent implements OnInit, ConfigSer
   public apiUrl: string = "";
 
   ngOnInit(): void {
-    this.data.currentMessage.subscribe(message => this.opponents = message);
+    this.data.currentMessage.subscribe(message => this.theWinner = message);
   }
 
 }

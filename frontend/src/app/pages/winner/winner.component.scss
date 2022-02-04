@@ -49,9 +49,6 @@
 
 // Items    ------------------------------------------------------------
 
-.quotePosition{
-
-}
 .versus{
     // margin-top: 15vh;
     display: flex;
@@ -59,24 +56,25 @@
     margin: auto;
 }
 
-.characterImageLeft{
-    max-width: 80%;
+.winnerCharacter{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.characterImageCenter{
+    max-width: 50%;
     height: auto;
     position: relative;
-    transform: rotateY(180deg);
-    margin-left: -10%;
-    margin-right:0%;
+    // transform: rotateY(180deg);
+    margin-left: auto;
+    margin-right:auto;
 
 //    max-width: 55%;
 //    max-height: 55%;
 //    margin: auto;
 }
-.characterImageRight{
-    max-width: 80%;
-    height: auto;
-    position: relative;
-    margin-left:20%;
-}
+
 
 .images{
     max-width: 100%;
@@ -84,7 +82,7 @@
     position: relative;
 }
 
-.circleLightLeft {
+.circleLightCenter {
     height: 22vw;
     width: 22vw;
     background-color: map.get(colors.$colors, "white");
@@ -93,7 +91,7 @@
     margin-top: 0%;
     top: 30vh
   }
-.circleDarkLeft {
+.circleDarkCenter {
     height: 22vw;
     width: 22vw;
     background-color: map.get(colors.$colors, "gray");
@@ -103,93 +101,6 @@
     top: 30vh
     // bottom:5vh;
   }
-.circleLightRight {
-    height: 22vw;
-    width: 22vw;
-    background-color: map.get(colors.$colors, "white");
-    border-radius: 50%;
-    position: fixed;
-    margin-left: auto;
-    top: 30vh
-  }
-.circleDarkRight {
-    height: 22vw;
-    width: 22vw;
-    background-color: map.get(colors.$colors, "gray");
-    border-radius: 50%;
-    position: fixed;
-    margin-left: 13.05%;
-    top: 30vh
-    // bottom:5vh;
-  }
-
-.barBaseLightRight{
-    width: 30vw;
-    height: 1vw;
-    margin-left: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "white");
-}
-.barBaseDarkRight{
-    width: 30vw;
-    height: 1vw;
-    margin-left: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "white");
-}
-.barBaseLightLeft{
-    width: 30vw;
-    height: 1vw;
-    margin-right: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "white");
-}
-.barBaseDarkLeft{
-    width: 30vw;
-    height: 1vw;
-    margin-right: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "white");
-}
-
-.barValueLightLeft{
-    // :current{
-    // width: attr(left-percentage)/100;
-    // }
-    height: 1vw;
-    margin-right: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "yellow");
-}
-.barValueDarkLeft{
-            
-    height: 1vw;
-    margin-right: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "red");
-}
-
-.barValueLightRight{
-    height: 1vw;
-    margin-left: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "yellow");
-}
-
-.barValueDarkRight{
-    height: 1vw;
-    margin-left: auto;
-    margin-bottom: 1vh;
-    border-radius: 3px;
-    background-color: map.get(colors.$colors, "red");
-}
 
 // ---------------------------------------------------------------------
 
@@ -252,7 +163,7 @@
     font-size: 150px;
     color: map.get(colors.$colors, "white");
 }
-.nameLeftFont{
+.winnerNameFont{
     font-family: 'StarJedi';
     font-size: 40px;
     color: map.get(colors.$colors, "white");

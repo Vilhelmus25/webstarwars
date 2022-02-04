@@ -29,7 +29,7 @@ export class SimulateFightComponent extends LoginComponent implements OnInit, Co
   loser: String = "";
   subscription: Subscription = new Subscription;
   message!: string[];
-  winner: string = "";
+  // winner!: string[];
 
 
   constructor(public userService: UserService,
@@ -50,31 +50,38 @@ export class SimulateFightComponent extends LoginComponent implements OnInit, Co
 
   ngOnInit(): void {
     this.data.currentMessage.subscribe(message => this.opponents = message)
-    console.log(this.opponents[0]);
-    console.log(this.opponents[1]);
-    console.log(this.opponents[2]);
-    console.log(this.opponents[3]);
     this.fightSimulator(this.leftBarSize, this.rightBarSize);
   }
 
   fightSimulator(leftBarSize: number, rightBarSize: number): String {
 
     let victorSide: String = "";
+    let winner: string[] = [];
     this.subscription = interval(1000).subscribe(() => {
       let currentLeftBarSizeInNumber: number = leftBarSize;
       let currentRightBarSizeInNumber: number = rightBarSize;
 
       if (currentLeftBarSizeInNumber <= 0 || currentRightBarSizeInNumber <= 0) {
-        if (currentLeftBarSizeInNumber <= 0) {
+        if (currentLeftBarSizeInNumber <= 0 && victorSide == "") {
           victorSide = "right";
-          this.winner = this.opponents[1];
+          // console.log(this.opponents[1], this.opponents[3]);
+          winner.push(this.opponents[1], this.opponents[3]);
         }
-        if (currentRightBarSizeInNumber <= 0) {
+        if (currentRightBarSizeInNumber <= 0 && victorSide == "") {
           victorSide = "left";
-          this.winner = this.opponents[0];
+          // console.log(this.opponents[0], this.opponents[2]);
+          winner.push(this.opponents[0]), winner.push(this.opponents[2]);
+        }
+        if (this.leftPercent === 0 || this.rightPercent === 0) {
+          // console.log("whacu doin");
+          // console.log("Winner: " + winner[0].toString());
+          this.message = winner;
+          console.log("message: " + this.message);
+          this.data.changeMessage(this.message);
+          this.router.navigate(['/winnerPage']);
         }
         this.loser = victorSide;
-        console.log(this.loser);
+        // console.log(this.loser);
         if (this.loser != "") {
           // clearInterval(this.subscription);
           this.subscription.unsubscribe();
@@ -98,12 +105,6 @@ export class SimulateFightComponent extends LoginComponent implements OnInit, Co
         console.log("River Side: " + this.rightBarSize);
       }
       console.log("-------------------");
-      if (this.leftPercent === 0 || this.rightPercent === 0) {
-        console.log("Winner: " + this.winner);
-        this.router.navigate(['/winnerPage']);
-        this.message.push(this.winner);
-        this.data.changeMessage(this.message);
-      }
     });
     return victorSide;
   }
