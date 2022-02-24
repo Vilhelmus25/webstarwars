@@ -46,4 +46,8 @@ export class WinnerComponent extends LoginComponent implements OnInit, ConfigSer
     this.data.currentMessage.subscribe(message => this.theWinner = message);
   }
 
+  backToMain() {
+    this.router.navigate(['/characterSelection']);
+  }
+
 }

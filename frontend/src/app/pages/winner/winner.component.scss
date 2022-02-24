@@ -102,6 +102,11 @@
     // bottom:5vh;
   }
 
+.returnToDeck{
+    width: 12vw;
+    background-color: map.get(colors.$colors, "yellow");
+}
+
 // ---------------------------------------------------------------------
 
 // Fonts -----------------------------------------------------------
@@ -166,6 +171,7 @@
 .winnerNameFont{
     font-family: 'StarJedi';
     font-size: 40px;
+    margin-top: 5%;
     color: map.get(colors.$colors, "white");
 }
 .nameRightFont{
@@ -204,6 +210,11 @@
 .simulateFight{
     font-family: 'StarJedi';
     font-size: 20px;
+    color: map.get(colors.$colors, "black");
+}
+.returnToDeck{
+    font-family: 'PoppinsBold';
+    font-size: 16px;
     color: map.get(colors.$colors, "black");
 }
 

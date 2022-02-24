@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConfigService {
-  public readonly apiUrl: string = 'http://127.0.0.1:3000/';
+  public readonly apiUrl: string = 'http://127.0.0.1:33333/';
   constructor() { }
 }
